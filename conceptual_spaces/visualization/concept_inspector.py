@@ -19,6 +19,40 @@ import sys
 sys.path.append("..")
 import cs.cs as space
 
+'''import matplotlib
+# Make sure that we are using QT5
+matplotlib.use('Qt5Agg')
+import matplotlib.pyplot as plt
+from PyQt5 import QtWidgets
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
+
+
+class ScrollableWindow(QtWidgets.QMainWindow):
+    def __init__(self, fig):
+        self.qapp = QtWidgets.QApplication([])
+
+        QtWidgets.QMainWindow.__init__(self)
+        self.widget = QtWidgets.QWidget()
+        self.setCentralWidget(self.widget)
+        self.widget.setLayout(QtWidgets.QVBoxLayout())
+        self.widget.layout().setContentsMargins(0,0,0,0)
+        self.widget.layout().setSpacing(0)
+
+        self.fig = fig
+        self.canvas = FigureCanvas(self.fig)
+        self.canvas.draw()
+        self.scroll = QtWidgets.QScrollArea(self.widget)
+        self.scroll.setWidget(self.canvas)
+
+        self.nav = NavigationToolbar(self.canvas, self.widget)
+        self.widget.layout().addWidget(self.nav)
+        self.widget.layout().addWidget(self.scroll)
+
+        self.show()
+        exit(self.qapp.exec_()) '''
+
+
 this = sys.modules[__name__]
 this._dimensions = None
 this._concepts = None
@@ -167,25 +201,29 @@ def _repaint_everything():
     for concept_name in this._active_concepts:
         concept, color, epsilons = this._concepts[concept_name]
         _draw_concept(concept, color, epsilons)
+        print(concept_name)
     this._fig.canvas.draw_idle()
 
    
-def init():
-    """Initializes the ConceptInspector and displays it."""
-    
+def init(dims=None):
+    """Initializes the ConceptInspector and displays it.""" 
     if this._initialized:   # make sure we can only call init once!
         return
     # figure out dimensionality of our space and initialize the plots accordingly
     this._dimensions = list(space._dim_names)
-    if len(this._dimensions) >= 3:
-        this._current_2d_indices = [(0,1), (0,2), (1,2)]
-        this._current_3d_indices = [0,1,2]
-    elif len(this._dimensions) == 2:
-        this._current_2d_indices = [(0,1), (1,0), (0,1)]
-        this._current_3d_indices = [0,1,1]
+    if len(dims):
+            this._current_2d_indices = [(dims[0],dims[1]), (dims[0],dims[2]), (dims[1],dims[2])]
+            this._current_3d_indices = [dims[0],dims[1],dims[2]]
     else:
-        this._current_2d_indices = [(0,0), (0,0), (0,0)]
-        this._current_3d_indices = [0,0,0]
+        if len(this._dimensions) >= 3:
+            this._current_2d_indices = [(0,1), (0,2), (1,2)]
+            this._current_3d_indices = [0,1,2]
+        elif len(this._dimensions) == 2:
+            this._current_2d_indices = [(0,1), (1,0), (0,1)]
+            this._current_3d_indices = [0,1,1]
+        else:
+            this._current_2d_indices = [(0,0), (0,0), (0,0)]
+            this._current_3d_indices = [0,0,0]
 
     # create the figure
     this._fig = plt.figure(figsize=(20,14))
@@ -205,7 +243,7 @@ def init():
     # now add radio buttons for selecting dimensions
     this._fig.subplots_adjust(left=0.2, right=0.98, top=0.95, bottom=0.05)
     
-    first_dim_radios_ax = this._fig.add_axes([0.025, 0.95 - 0.03 * space._n_dim, 0.12, 0.03 * space._n_dim], facecolor='w') 
+    first_dim_radios_ax = this._fig.add_axes([0.025, 0.88, 0.12, 0.12], facecolor='w') 
     first_dim_radios_ax.set_title("First dimension")
     first_dim_radios = RadioButtons(first_dim_radios_ax, this._dimensions, active=0)
     def first_dim_click_handler(label):
@@ -216,7 +254,7 @@ def init():
         _repaint_everything()
     first_dim_radios.on_clicked(first_dim_click_handler)
     
-    second_dim_radios_ax = this._fig.add_axes([0.025, 0.95 - 0.06 * space._n_dim - 0.05, 0.12, 0.03 * space._n_dim], facecolor='w')
+    second_dim_radios_ax = this._fig.add_axes([0.025, 0.73, 0.12, 0.12], facecolor='w')
     second_dim_radios_ax.set_title("Second dimension")
     second_dim_radios = RadioButtons(second_dim_radios_ax, this._dimensions, active=1)
     def second_dim_click_handler(label):
@@ -228,7 +266,7 @@ def init():
         this._fig.canvas.draw_idle()
     second_dim_radios.on_clicked(second_dim_click_handler)
 
-    third_dim_radios_ax = this._fig.add_axes([0.025, 0.95 - 0.09 * space._n_dim - 0.10, 0.12, 0.03 * space._n_dim], facecolor='w')
+    third_dim_radios_ax = this._fig.add_axes([0.025, 0.58, 0.12, 0.12], facecolor='w')
     third_dim_radios_ax.set_title("Third dimension")
     third_dim_radios = RadioButtons(third_dim_radios_ax, this._dimensions, active=2)
     def third_dim_click_handler(label):
@@ -242,13 +280,14 @@ def init():
     this._radios = (first_dim_radios, second_dim_radios, third_dim_radios)    
     
     # add area for check boxes (concept selection)
-    this._checks_ax = this._fig.add_axes([0.025, 0.05, 0.12, 0.15], facecolor='w')
+    this._checks_ax = this._fig.add_axes([0.025, 0.5, 0.12, 0.09], facecolor='w')
 
     # load all concepts, draw everything, then display the window    
     this._initialized = True
     update()
     plt.ion()
     plt.show()
+
 
 
 def update():
@@ -311,7 +350,7 @@ def update():
     
     # recreate the check boxes
     this._checks_ax.clear()
-    this._checks_ax.set_position([0.025, 0.95 - 0.09 * space._n_dim - 0.15 - 0.03 * len(list(this._concepts.keys())), 0.12, 0.03 * len(list(this._concepts.keys()))])
+    this._checks_ax.set_position([0.025, 0.0, 0.12, 0.03 * len(list(this._concepts.keys()))])
     this._checks_ax.set_title("Concepts")
     this._checks = CheckButtons(this._checks_ax, list(sorted(this._concepts.keys())), list([x in this._active_concepts for x in list(sorted(this._concepts.keys()))]))
     c = list([this._concepts[x][1] for x in list(sorted(this._concepts.keys()))])    # color them nicely
