@@ -1,3 +1,6 @@
+##One-shot Learning in Conceptual Spaces
+This is work in progress for my bachelor thesis. It is based on the CS implementation described below.
+
 # ConceptualSpaces
 Version 1.0.0: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.825459.svg)](https://doi.org/10.5281/zenodo.825459) [Release](https://github.com/lbechberger/ConceptualSpaces/releases/tag/v1.0.0)
 
