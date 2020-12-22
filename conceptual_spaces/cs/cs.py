@@ -23,7 +23,7 @@ this._dim_names = None
 this._concepts = None
 this._concept_colors = None
 this._no_weights = None
-this._precision_digits = 10
+this._precision_digits = 15
 this._epsilon = 1e-10
 
 def init(n_dim, domains, dim_names = None):
@@ -62,6 +62,8 @@ def init(n_dim, domains, dim_names = None):
             local_dim_weights[dim] = 1
         dim_weights[dom] = local_dim_weights
     this._no_weights = wghts.Weights(dom_weights, dim_weights)
+    this._def_dim_weights = dim_weights
+    this._def_dom_weights = dom_weights
     
 def _check_domain_structure(domains, n_dim):
     """Checks whether the domain structure is valid."""
