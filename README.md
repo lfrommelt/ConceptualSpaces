@@ -1,4 +1,4 @@
-##One-shot Learning in Conceptual Spaces
+## One-shot Learning in Conceptual Spaces
 This is work in progress for my bachelor thesis. It is based on the CS implementation described below.
 
 # ConceptualSpaces
