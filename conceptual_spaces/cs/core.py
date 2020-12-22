@@ -136,7 +136,8 @@ class Core:
         return central_region
 
 def check(cuboids, domains):
-    """Asserts that the intersection of all cuboids is nonempty and that they are defined on the same domains"""
+    """Asserts that the intersection of all cuboids is nonempty"""
+    #and that they are defined on the same domains"""
 
     intersection = cuboids[0]
     for c in cuboids:
@@ -147,9 +148,9 @@ def check(cuboids, domains):
     if not all(dom in list(cs._domains.items()) for dom in list(domains.items())):
         return False
     
-    for c in cuboids:
+    """for c in cuboids:
         if c._domains != domains:
-            return False
+            return False"""
     
     return True
 
@@ -165,7 +166,7 @@ def from_cuboids(cuboids, domains):
     # need to perform repair mechanism        
     midpoints = []
     for cuboid in cubs: # midpoint of each cuboid
-        midpoints.append(list(map(lambda x, y: 0.5*(x + y), cuboid._p_min, cuboid._p_max)))
+        midpoints.append(list(map(lambda x, y: 0.5*(x + y) if not(x==float('-inf')) else 0, cuboid._p_min, cuboid._p_max)))
     # sum up all midpoints & divide by number of cuboids
     midpoint = reduce(lambda x, y: list(map(lambda a,b: a+b, x, y)), midpoints)
     midpoint = [x/len(cubs) for x in midpoint]
