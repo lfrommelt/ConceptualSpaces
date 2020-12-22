@@ -1,0 +1,5145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Document : elements_02.xml Created on : March 21, 2014, 5:53 PM Author 
+: radicion Description: Purpose of the document follows. -->
+
+<cs:objects xmlns:cs="http://www.example.org/conceptualspace"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/conceptualspace ../xml_schemas/objects.xsd">
+
+	<!-- ANIMALS -->
+
+		
+<object id="01944390" name="Rhinoceros">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<genericPhysicalDescription>
+			<locomotion id="01885845" name="slow_walk">
+				<movement>4</movement>
+				<speed>3</speed>
+			</locomotion>
+			<hasPart id="02584915" name="horn">
+				<number>2</number>
+			</hasPart>
+			
+			<location id="08598301" name="savanna">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">40</temperature>
+				<altitude id="05131647">10</altitude>
+				<vegetation id="08436759">60</vegetation>
+			</location>
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>5</foodQuantity>
+			</feeding>
+		</genericPhysicalDescription>
+	</object>	
+	
+	<object id="02131653" name="bear">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="bear_size">
+				<x id="05136150">150</x>
+				<y id="05137165">250</y>
+				<z id="05103072">100</z>
+			</size>
+
+			<color id="04971928" name="brown">
+				<l id="04951373">30</l>
+				<a>10</a>
+				<b>40</b>
+			</color>
+
+			<location id="09284015" name="forest">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">600</altitude>
+				<vegetation id="08436759">80</vegetation>
+				<favoriteLocation id="08591399">den</favoriteLocation>
+			</location>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>90</foodQuantity>
+				<favoriteFood id="02512053">fish</favoriteFood>
+			</feeding>
+			
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>90</foodQuantity>
+				<favoriteFood id="07858978">honey</favoriteFood>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01899062" name="fur">
+				<number>1</number>
+
+				<partShape id="02410393">thick</partShape>
+
+				<partSize id="05098942" name="bear_size">
+					<x id="05136150">15</x>
+					<y id="05137165">5</y>
+					<z id="05103072">25</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<symbol id="04907826">wild</symbol>
+			<symbol id="02321009">strong</symbol>
+			<symbol id="14540765">danger</symbol>
+		</manRelationship>
+	</object>
+	
+	<object id="01503061" name="Swan">
+		<class id="00015388">animal</class>
+		<family id="01503061">bird</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="bird_size">
+				<x id="05136150">60</x>
+				<y id="05137165">100</y>
+				<z id="05103072">120</z>
+			</size>
+
+			<color id="04960729" name="white">
+				<l id="04951373">100</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<locomotion id="01940403" name="fly">
+				<movement>8</movement>
+				<speed id="15282696">20</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>2</number>
+
+				<partSize id="05098942" name="bird_leg_size">
+					<x id="05136150">2</x>
+					<y id="05137165">3</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04965179" name="dark_orange">
+					<l id="04951373">63</l>
+					<a>43</a>
+					<b>70</b>
+				</partColor>
+
+			</hasPart>
+
+			<hasPart id="02151625" name="wing">
+				<number>2</number>
+
+				<partSize id="05098942" name="bird_wing_size">
+					<x id="05136150">20</x>
+					<y id="05137165">10</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01758510" name="beak">
+				<number>1</number>
+
+				<partSize id="05098942">
+					<x id="05136150">2</x>
+					<y id="05137165">2</y>
+					<z id="05103072">3</z>
+				</partSize>
+
+				<partColor id="04965661" name="yellow">
+					<l id="04951373">80</l>
+					<a>-20</a>
+					<b>94</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+	</object>
+
+
+	<object id="02062744" name="whale">
+		<class id="00015388">animal</class>
+		<family id="02062430">cetacean</family>
+		<family id="02512053">mammal</family>
+		<genericPhysicalDescription>
+			<size id="05098942" name="whale_size">
+				<x id="05136150">600</x>
+				<y id="05137165">500</y>
+				<z id="05103072">12000</z>
+			</size>
+			
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<favoriteFood id="01383638">plankton</favoriteFood>
+			</feeding>
+		</genericPhysicalDescription>
+	</object>
+	
+	
+	<object id="01503061" name="Robin">
+		<class id="00015388">animal</class>
+		<family id="01503061">bird</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="bird_size">
+				<x id="05136150">20</x>
+				<y id="05137165">30</y>
+				<z id="05103072">60</z>
+			</size>
+
+			<color id="04960729" name="white">
+				<l id="04951373">100</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<locomotion id="01940403" name="fly">
+				<movement>8</movement>
+				<speed id="15282696">30</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>2</number>
+
+				<partSize id="05098942" name="bird_leg_size">
+					<x id="05136150">2</x>
+					<y id="05137165">3</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04965179" name="dark_orange">
+					<l id="04951373">63</l>
+					<a>43</a>
+					<b>70</b>
+				</partColor>
+
+			</hasPart>
+
+			<hasPart id="02151625" name="wing">
+				<number>2</number>
+
+				<partSize id="05098942" name="bird_wing_size">
+					<x id="05136150">20</x>
+					<y id="05137165">10</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01758510" name="beak">
+				<number>1</number>
+
+				<partSize id="05098942">
+					<x id="05136150">2</x>
+					<y id="05137165">2</y>
+					<z id="05103072">3</z>
+				</partSize>
+
+				<partColor id="04965661" name="yellow">
+					<l id="04951373">80</l>
+					<a>-20</a>
+					<b>94</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+	</object>
+
+	<object id="02274259" name="butterfly">
+		<class id="00015388">animal</class>
+		<family id="02159955">insect</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="butterfly_size">
+				<x id="05136150">6</x>
+				<y id="05137165">3</y>
+				<z id="05103072">0.5</z>
+			</size>
+
+			<color id="04960729" name="white">
+				<l id="04951373">100</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<color id="04962784" name="red">
+				<l id="04951373">53</l>
+				<a>80</a>
+				<b>67</b>
+			</color>
+
+			<color id="04967191" name="green">
+				<l id="04951373">50</l>
+				<a>-52</a>
+				<b>50</b>
+			</color>
+
+			<color id="04968895" name="blue">
+				<l id="04951373">32</l>
+				<a>79</a>
+				<b>-108</b>
+			</color>
+
+			<color id="04965661" name="yellow">
+				<l id="04951373">97</l>
+				<a>-22</a>
+				<b>94</b>
+			</color>
+
+			<location id="09284015" name="forest">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">600</altitude>
+				<vegetation id="08436759">80</vegetation>
+			</location>
+
+			<feeding id="" name="detritivore">
+				<foodType>3</foodType>
+				<foodQuantity>1</foodQuantity>
+			</feeding>
+
+			<locomotion id="01940403" name="fly">
+				<movement>8</movement>
+				<speed id="15282696">0.5</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+
+				<number>6</number>
+
+				<partSize id="05098942">
+					<x id="05136150">0.1</x>
+					<y id="05137165">1</y>
+					<z id="05103072">0.1</z>
+				</partSize>
+
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02151625" name="wing">
+				<partShape id="01786133">patterned</partShape>
+				<number>2</number>
+
+				<partSize id="05098942">
+					<x id="05136150">3</x>
+					<y id="05137165">3</y>
+					<z id="05103072">0.5</z>
+				</partSize>
+
+				<partColor name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+
+				<partColor id="04962784" name="red">
+					<l id="04951373">53</l>
+					<a>80</a>
+					<b>67</b>
+				</partColor>
+
+				<partColor id="04967191" name="green">
+					<l id="04951373">50</l>
+					<a>-52</a>
+					<b>50</b>
+				</partColor>
+
+				<partColor id="04968895" name="blue">
+					<l id="04951373">32</l>
+					<a>79</a>
+					<b>-108</b>
+				</partColor>
+
+				<partColor id="04965661" name="yellow">
+					<l id="04951373">97</l>
+					<a>-22</a>
+					<b>94</b>
+				</partColor>
+
+			</hasPart>
+
+		</genericPhysicalDescription>
+	</object>
+
+	<object id="02437136" name="camel">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<family id="02399000">ruminant</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="camel_size">
+				<x id="05136150">90</x>
+				<y id="05137165">250</y>
+				<z id="05103072">300</z>
+			</size>
+
+			<color id="04973291" name="beige">
+				<l id="04951373">63</l>
+				<a>13</a>
+				<b>32</b>
+			</color>
+
+			<location id="08505573" name="desert">
+				<humidity id="14535643">0</humidity>
+				<temperature id="05011790">50</temperature>
+				<altitude id="05131647">450</altitude>
+				<vegetation id="08436759">0</vegetation>
+			</location>
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>30</foodQuantity>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<locomotion id="01926311" name="run">
+				<movement>5</movement>
+				<speed id="15282696">45</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+
+				<partSize id="05098942">
+					<x id="05136150">10</x>
+					<y id="05137165">8</y>
+					<z id="05103072">20</z>
+				</partSize>
+
+				<partColor id="04973291" name="beige">
+					<l id="04951373">63</l>
+					<a>13</a>
+					<b>32</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="13894434" name="hump">
+
+				<number>2</number>
+
+				<partSize id="05098942">
+					<x id="05136150">20</x>
+					<y id="05137165">40</y>
+					<z id="05103072">50</z>
+				</partSize>
+
+				<partColor id="04973291" name="beige">
+					<l id="04951373">63</l>
+					<a>13</a>
+					<b>32</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<function id="03100490">transport</function>
+			<function id="01957529">ride</function>
+		</manRelationship>
+	</object>
+
+	<object id="07644967" name="chicken">
+		<class id="00015388">animal</class>
+		<family id="01503061">bird</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="chicken_size">
+				<x id="05136150">25</x>
+				<y id="05137165">40</y>
+				<z id="05103072">45</z>
+			</size>
+
+			<color id="04965179" name="dark_orange">
+				<l id="04951373">63</l>
+				<a>43</a>
+				<b>70</b>
+			</color>
+
+			<location id="03322099" name="farm">
+				<humidity id="14535643">60</humidity>
+				<temperature id="05011790">20</temperature>
+				<altitude id="05131647">100</altitude>
+				<vegetation id="08436759">50</vegetation>
+				<favoriteLocation id="03322099">farm</favoriteLocation>
+				<favoriteLocation id="03016389">henhouse</favoriteLocation>
+			</location>
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>5</foodQuantity>
+			</feeding>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>5</foodQuantity>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">5</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>2</number>
+
+				<partSize id="05098942" name="chicken_leg_size">
+					<x id="05136150">3</x>
+					<y id="05137165">5</y>
+					<z id="05103072">3</z>
+				</partSize>
+
+				<partColor id="04965179" name="dark_orange">
+					<l id="04951373">63</l>
+					<a>43</a>
+					<b>70</b>
+				</partColor>
+
+			</hasPart>
+
+			<hasPart id="01758510" name="beak">
+				<number>1</number>
+
+				<partSize id="05098942" name="chicken_beak_size">
+					<x id="05136150">2</x>
+					<y id="05137165">2</y>
+					<z id="05103072">3</z>
+				</partSize>
+
+				<partColor id="04965661" name="yellow">
+					<l id="04951373">80</l>
+					<a>-20</a>
+					<b>94</b>
+				</partColor>
+
+			</hasPart>
+
+			<hasPart id="02151625" name="wing">
+				<number>2</number>
+
+				<partSize id="05098942" name="chicken_wing_size">
+					<x id="05136150">25</x>
+					<y id="05137165">15</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04965179" name="dark_orange">
+					<l id="04951373">63</l>
+					<a>43</a>
+					<b>70</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<product id="01874434">meat</product>
+			<product id="07840804">egg</product>
+		</manRelationship>
+	</object>
+
+	<object id="01976957" name="crab">
+		<class id="00015388">animal</class>
+		<family id="01974773">crustacean</family>
+
+		<genericPhysicalDescription>
+
+			<shape id="02040652">circular</shape>
+			
+			<size id="05098942" name="crab_size">
+				<x id="05136150">15</x>
+				<y id="05137165">3</y>
+				<z id="05103072">8</z>
+			</size>
+
+			<color id="04962784" name="red">
+				<l id="04951373">53</l>
+				<a>80</a>
+				<b>67</b>
+			</color>
+
+			<location id="09426788" name="sea">
+				<humidity id="14535643">100</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">0</altitude>
+				<vegetation id="08436759">0</vegetation>
+			</location>
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>2</foodQuantity>
+			</feeding>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>2</foodQuantity>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">0.5</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>10</number>
+
+				<partSize id="05098942" name="crab_leg_size">
+					<x id="05136150">1</x>
+					<y id="05137165">3</y>
+					<z id="05103072">1</z>
+				</partSize>
+
+				<partColor id="04962784" name="red">
+					<l id="04951373">53</l>
+					<a>80</a>
+					<b>67</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01903756" name="shell">
+				<number>1</number>
+				<partShape id="00659259">flat</partShape>
+
+				<partSize id="05098942" name="crab_shell_size">
+					<x id="05136150">10</x>
+					<y id="05137165">3</y>
+					<z id="05103072">8</z>
+				</partSize>
+
+				<partColor id="04962784" name="red">
+					<l id="04951373">53</l>
+					<a>80</a>
+					<b>67</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02156532" name="claw">
+				<number>2</number>
+
+				<partSize id="05098942" name="crab_claw_size">
+					<x id="05136150">2</x>
+					<y id="05137165">4</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04962784" name="red">
+					<l id="04951373">53</l>
+					<a>80</a>
+					<b>67</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<product id="00021265">food</product>
+		</manRelationship>
+	</object>
+
+	<object id="01697178" name="crocodile">
+		<class id="00015388">animal</class>
+		<family id="01661091">reptile</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="crocodile_size">
+				<x id="05136150">60</x>
+				<y id="05137165">50</y>
+				<z id="05103072">300</z>
+			</size>
+
+			<color id="04967191" name="green">
+				<l id="04951373">46</l>
+				<a>-52</a>
+				<b>50</b>
+			</color>
+
+			<location id="09328904" name="lake">
+				<humidity id="14535643">100</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">300</altitude>
+				<vegetation id="08436759">30</vegetation>
+			</location>
+
+			<location id="09411430" name="river">
+				<humidity id="14535643">100</humidity>
+				<temperature id="05011790">25</temperature>
+				<altitude id="05131647">400</altitude>
+				<vegetation id="08436759">30</vegetation>
+			</location>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>100</foodQuantity>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+
+				<partSize id="05098942" name="crocodile_leg_size">
+					<x id="05136150">20</x>
+					<y id="05137165">15</y>
+					<z id="05103072">20</z>
+				</partSize>
+
+				<partColor id="04967191" name="green">
+					<l id="04951373">46</l>
+					<a>-52</a>
+					<b>50</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="05302499" name="mouth">
+				<number>1</number>
+
+				<partSize id="05098942" name="crocodile_mouth_size">
+					<x id="05136150">60</x>
+					<y id="05137165">50</y>
+					<z id="05103072">90</z>
+				</partSize>
+
+				<partColor id="04967191" name="green">
+					<l id="04951373">46</l>
+					<a>-52</a>
+					<b>50</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="05282746" name="tooth">
+				<partShape id="00800826">sharp</partShape>
+
+				<partSize id="05098942" name="crocodile_teeth_size">
+					<x id="05136150">6</x>
+					<y id="05137165">10</y>
+					<z id="05103072">4</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01902877" name="scale">
+				<partColor id="04967191" name="green">
+					<l id="04951373">46</l>
+					<a>-52</a>
+					<b>50</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02157557" name="tail">
+				<number>1</number>
+
+				<partSize id="05098942" name="crocodile_tail_size">
+					<x id="05136150">60</x>
+					<y id="05137165">50</y>
+					<z id="05103072">100</z>
+				</partSize>
+
+				<partColor id="04967191" name="green">
+					<l id="04951373">46</l>
+					<a>-52</a>
+					<b>50</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<symbol id="02321009">strong</symbol>
+			<symbol id="14540765">danger</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="02068974" name="dolphin">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="dolphin_size">
+				<x id="05136150">60</x>
+				<y id="05137165">80</y>
+				<z id="05103072">250</z>
+			</size>
+
+			<color id="04961691" name="grey">
+				<l id="04951373">50</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<location id="09426788" name="sea">
+				<humidity id="14535643">100</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">0</altitude>
+				<vegetation id="08436759">0</vegetation>
+			</location>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>40</foodQuantity>
+			</feeding>
+
+			<locomotion id="01960911" name="swim">
+				<movement>1</movement>
+				<speed id="15282696">30</speed>
+			</locomotion>
+
+			<hasPart id="02157557" name="tail">
+				<number>1</number>
+
+				<partSize id="05098942" name="dolphin_tail_size">
+					<x id="05136150">30</x>
+					<y id="05137165">15</y>
+					<z id="05103072">5</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02466132" name="fin">
+				<number>3</number>
+
+				<partSize id="05098942" name="dolphin_fin_size">
+					<x id="05136150">30</x>
+					<y id="05137165">40</y>
+					<z id="05103072">5</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<symbol id="01334398">intelligent</symbol>
+		</manRelationship>
+	</object>
+
+
+	<object id="01639765" name="frog">
+		<class id="00015388">animal</class>
+		<family id="01627424">amphibian</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="frog_size">
+				<x id="05136150">10</x>
+				<y id="05137165">10</y>
+				<z id="05103072">15</z>
+			</size>
+
+			<color id="04967191" name="green">
+				<l id="04951373">46</l>
+				<a>-52</a>
+				<b>50</b>
+			</color>
+
+			<location id="09328904" name="lake">
+				<humidity id="14535643">100</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">300</altitude>
+				<vegetation id="08436759">30</vegetation>
+			</location>
+
+			<location id="09411430" name="river">
+				<humidity id="14535643">100</humidity>
+				<temperature id="05011790">25</temperature>
+				<altitude id="05131647">400</altitude>
+				<vegetation id="08436759">30</vegetation>
+			</location>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>2</foodQuantity>
+				<favoriteFood id="02159955">insect</favoriteFood>
+			</feeding>
+
+			<locomotion id="01963942" name="jump">
+				<movement>7</movement>
+				<speed id="15282696">2</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+				<partSize id="05098942">
+					<x id="05136150">2</x>
+					<y id="05137165">10</y>
+					<z id="05103072">2</z>
+				</partSize>
+				<partColor id="04967191" name="green">
+					<l id="04951373">46</l>
+					<a>-52</a>
+					<b>50</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<product id="00021265">food</product>
+		</manRelationship>
+	</object>
+
+	<object id="02439033" name="giraffe">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<family id="02399000">ruminant</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="giraffe_size">
+				<x id="05136150">200</x>
+				<y id="05137165">550</y>
+				<z id="05103072">250</z>
+			</size>
+
+			<color id="04973291" name="beige">
+				<l id="04951373">63</l>
+				<a>13</a>
+				<b>32</b>
+			</color>
+
+			<location id="08645847" name="savanna">
+				<humidity id="14535643">50</humidity>
+				<temperature id="05011790">40</temperature>
+				<altitude id="05131647">100</altitude>
+				<vegetation id="08436759">50</vegetation>
+			</location>
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>30</foodQuantity>
+				<favoriteFood id="13152742">leaf</favoriteFood>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+
+				<partSize id="05098942" name="giraffe_leg_size">
+					<x id="05136150">10</x>
+					<y id="05137165">200</y>
+					<z id="05103072">10</z>
+				</partSize>
+
+				<partColor id="04973291" name="beige">
+					<l id="04951373">63</l>
+					<a>13</a>
+					<b>32</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="05546540" name="neck">
+				<number>1</number>
+
+				<partSize id="05098942" name="giraffe_neck_size">
+					<x id="05136150">30</x>
+					<y id="05137165">200</y>
+					<z id="05103072">30</z>
+				</partSize>
+
+				<partColor id="04973291" name="beige">
+					<l id="04951373">63</l>
+					<a>13</a>
+					<b>32</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="04694441" name="spot">
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+	</object>
+
+	<object id="02374451" name="horse">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<family id="02374149">equine</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="equine_size">
+				<x id="05136150">100</x>
+				<y id="05137165">200</y>
+				<z id="05103072">300</z>
+			</size>
+
+			<color id="04971928" name="brown">
+				<l id="04951373">30</l>
+				<a>10</a>
+				<b>40</b>
+			</color>
+
+			<location id="08598301" name="grassland">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">100</altitude>
+				<vegetation id="08436759">60</vegetation>
+				<favoriteLocation id="04294879">stable</favoriteLocation>
+			</location>
+
+
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>30</foodQuantity>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<locomotion id="01926311" name="run">
+				<movement>5</movement>
+				<speed id="15282696">55</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+
+				<partSize id="05098942" name="horse_leg_size">
+					<x id="05136150">10</x>
+					<y id="05137165">15</y>
+					<z id="05103072">100</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01899746" name="crane">
+				<number>1</number>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<function id="03100490">transport</function>
+			<function id="01957529">ride</function>
+			<product id="00021265">food</product>
+			<symbol id="10238375">knight</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="01882714" name="koala">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<family id="01874434">marsupial</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="koala_size">
+				<x id="05136150">30</x>
+				<y id="05137165">70</y>
+				<z id="05103072">20</z>
+			</size>
+
+			<color id="04961691" name="grey">
+				<l id="04951373">50</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<location id="09284015" name="forest">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">200</altitude>
+				<vegetation id="08436759">80</vegetation>
+				<favoriteLocation id="13104059">tree</favoriteLocation>
+				<favoriteLocation id="08831004">Australia</favoriteLocation>
+			</location>
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>5</foodQuantity>
+				<favoriteFood id="13152742">leaf</favoriteFood>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">2</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+				<partSize id="05098942">
+					<x id="05136150">5</x>
+					<y id="05137165">5</y>
+					<z id="05103072">20</z>
+				</partSize>
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01899062" name="fur">
+				<number>1</number>
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+	</object>
+
+	<object id="02127052" name="lynx">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<family id="02120997">feline</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="lynx_size">
+				<x id="05136150">20</x>
+				<y id="05137165">55</y>
+				<z id="05103072">80</z>
+			</size>
+
+			<color id="04971928" name="brown">
+				<l id="04951373">30</l>
+				<a>10</a>
+				<b>40</b>
+			</color>
+
+			<color id="04961691" name="grey">
+				<l id="04951373">50</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<location id="09359803" name="mountain">
+				<humidity id="14535643">60</humidity>
+				<temperature id="05011790">10</temperature>
+				<altitude id="05131647">800</altitude>
+				<vegetation id="08436759">60</vegetation>
+			</location>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>40</foodQuantity>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<locomotion id="01926311" name="run">
+				<movement>5</movement>
+				<speed id="15282696">40</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+
+				<partSize id="05098942" name="lynx_leg_size">
+					<x id="05136150">5</x>
+					<y id="05137165">5</y>
+					<z id="05103072">20</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02157557" name="tail">
+				<number>1</number>
+
+				<partSize id="05098942" name="lynx_tail_size">
+					<x id="05136150">5</x>
+					<y id="05137165">5</y>
+					<z id="05103072">15</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="05320899" name="ear">
+				<number>2</number>
+				<partShape id="01809655">pointed</partShape>
+				<partShape id="01809655">tufted</partShape>
+
+				<partSize id="05098942" name="lynx_ear_size">
+					<x id="05136150">5</x>
+					<y id="05137165">2</y>
+					<z id="05103072">10</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="04694441" name="spot">
+				<partColor id="04960277" name="black">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01899062" name="fur">
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<symbol id="04907826">wild</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="01621127" name="owl">
+		<class id="00015388">animal</class>
+		<family id="01503061">bird</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="owl_size">
+				<x id="05136150">20</x>
+				<y id="05137165">40</y>
+				<z id="05103072">15</z>
+			</size>
+
+			<color id="04971928" name="brown">
+				<l id="04951373">30</l>
+				<a>10</a>
+				<b>40</b>
+			</color>
+
+			<location id="09284015" name="forest">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">600</altitude>
+				<vegetation id="08436759">80</vegetation>
+				<time id="15122231">5</time>
+				<favoriteLocation id="13104059">tree</favoriteLocation>
+			</location>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>5</foodQuantity>
+			</feeding>
+
+			<locomotion id="01940403" name="fly">
+				<movement>8</movement>
+				<speed id="15282696">30</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>2</number>
+
+				<partSize id="05098942" name="owl_leg_size">
+					<x id="05136150">5</x>
+					<y id="05137165">5</y>
+					<z id="05103072">5</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02151625" name="wing">
+				<number>2</number>
+
+				<partSize id="05098942" name="owl_wing_size">
+					<x id="05136150">30</x>
+					<y id="05137165">10</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="949491" name="eye">
+				<number>2</number>
+				<partShape id="02040652">circular</partShape>
+				<partSize id="05098942">
+					<x id="05136150">3</x>
+					<y id="05137165">3</y>
+					<z id="05103072">3</z>
+				</partSize>
+
+				<partColor id="04965661" name="yellow">
+					<l id="04951373">97</l>
+					<a>-22</a>
+					<b>94</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+		<manRelationship>
+			<symbol id="10193026">hunter</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="02128925" name="panther">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<family id="02120997">feline</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="panther_size">
+				<x id="05136150">70</x>
+				<y id="05137165">100</y>
+				<z id="05103072">200</z>
+			</size>
+
+			<color id="04960277" name="black">
+				<l id="04951373">0</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<location id="09284015" name="forest">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">500</altitude>
+				<vegetation id="08436759">80</vegetation>
+			</location>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>70</foodQuantity>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<locomotion id="01926311" name="run">
+				<movement>5</movement>
+				<speed id="15282696">45</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+
+				<partSize id="05098942" name="panther_leg_size">
+					<x id="05136150">8</x>
+					<y id="05137165">4</y>
+					<z id="05103072">6</z>
+				</partSize>
+
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="05282746" name="tooth">
+				<partShape id="00800826">sharp</partShape>
+
+				<partSize id="05098942" name="panther_teeth_size">
+					<x id="05136150">3</x>
+					<y id="05137165">5</y>
+					<z id="05103072">1</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<symbol id="04907826">wild</symbol>
+			<symbol id="14540765">danger</symbol>
+		</manRelationship>
+
+	</object>
+	
+	<object id="01944390" name="Hippo">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<genericPhysicalDescription>
+		
+<size id="05098942" name="exemplar_pygmy_hippo_size">
+				<x id="05136150">120</x>
+				<y id="05137165">150</y>
+				<z id="05103072">350</z>
+			</size>
+					
+			<locomotion id="01885845" name="swim">
+				<movement>1</movement>
+				<speed>15</speed>
+			</locomotion>
+			
+				<locomotion id="01885845" name="slow_walk">
+				<movement>4</movement>
+				<speed>3</speed>
+			</locomotion>
+			
+			<location id="08598301" name="savanna">
+				<humidity id="14535643">90</humidity>
+				<temperature id="05011790">40</temperature>
+				<altitude id="05131647">10</altitude>
+				<vegetation id="08436759">40</vegetation>
+			</location>
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>5</foodQuantity>
+			</feeding>
+		</genericPhysicalDescription>
+	</object>	
+
+	
+	<object id="02055803" name="penguin">
+		<class id="00015388">animal</class>
+		<family id="01503061">bird</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="penguin_size">
+				<x id="05136150">50</x>
+				<y id="05137165">100</y>
+				<z id="05103072">30</z>
+			</size>
+
+			<color id="04960277" name="black">
+				<l id="04951373">0</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<color id="04960729" name="white">
+				<l id="04951373">100</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<location id="09198106" name="antartica">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">-20</temperature>
+				<altitude id="05131647">30</altitude>
+				<vegetation id="08436759">0</vegetation>
+			</location>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>10</foodQuantity>
+				<favoriteFood id="02512053">fish</favoriteFood>
+			</feeding>
+
+			<locomotion id="01960911" name="swim">
+				<movement>1</movement>
+				<speed id="15282696">15</speed>
+			</locomotion>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>2</number>
+
+				<partSize id="05098942" name="penguin_leg_size">
+					<x id="05136150">4</x>
+					<y id="05137165">6</y>
+					<z id="05103072">4</z>
+				</partSize>
+
+				<partColor id="04965179" name="dark_orange">
+					<l id="04951373">63</l>
+					<a>43</a>
+					<b>70</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02151625" name="wing">
+				<number>2</number>
+
+				<partSize id="05098942" name="penguin_wing_size">
+					<x id="05136150">30</x>
+					<y id="05137165">15</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01758510" name="beak">
+				<number>1</number>
+
+				<partSize id="05098942" name="penguin_beak_size">
+					<x id="05136150">2</x>
+					<y id="05137165">2</y>
+					<z id="05103072">4</z>
+				</partSize>
+
+				<partColor id="04965179" name="dark_orange">
+					<l id="04951373">63</l>
+					<a>43</a>
+					<b>70</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+	</object>
+
+
+
+	<object id="02324045" name="rabbit">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="rabbit_size">
+				<x id="05136150">15</x>
+				<y id="05137165">20</y>
+				<z id="05103072">40</z>
+			</size>
+
+			<color id="04960729" name="white">
+				<l id="04951373">100</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<color id="04971928" name="brown">
+				<l id="04951373">30</l>
+				<a>10</a>
+				<b>40</b>
+			</color>
+
+			<color id="04961691" name="grey">
+				<l id="04951373">50</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<location id="09284015" name="forest">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">500</altitude>
+				<vegetation id="08436759">80</vegetation>
+				<favoriteLocation>hole</favoriteLocation>
+			</location>
+
+			<location id="08598301" name="grassland">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">100</altitude>
+				<vegetation id="08436759">60</vegetation>
+				<favoriteLocation id="03322099">farm</favoriteLocation>
+			</location>
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>5</foodQuantity>
+				<favoriteFood id="07730207">carrot</favoriteFood>
+			</feeding>
+
+			<locomotion id="01963942" name="jump">
+				<movement>7</movement>
+				<speed id="15282696">5</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+
+				<partSize id="05098942" name="rabbit_leg_size">
+					<x id="05136150">4</x>
+					<y id="05137165">3</y>
+					<z id="05103072">8</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="05320899" name="ear">
+				<number>2</number>
+
+				<partSize id="05098942" name="rabbit_ear_size">
+					<x id="05136150">3</x>
+					<y id="05137165">10</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01899062" name="fur">
+				<number>1</number>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<product id="00021265">food</product>
+		</manRelationship>
+
+	</object>
+
+	<object id="01482330" name="shark">
+		<class id="00015388">animal</class>
+		<family id="02512053">fish</family>
+
+		<genericPhysicalDescription>
+			<size id="05098942" name="shark_size">
+				<x id="05136150">100</x>
+				<y id="05137165">60</y>
+				<z id="05103072">300</z>
+			</size>
+
+			<color id="04961691" name="grey">
+				<l id="04951373">50</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<location id="09426788" name="sea">
+				<humidity id="14535643">100</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">0</altitude>
+				<vegetation id="08436759">0</vegetation>
+			</location>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>100</foodQuantity>
+				<favoriteFood id="02512053">fish</favoriteFood>
+			</feeding>
+
+			<locomotion id="01960911" name="swim">
+				<movement>1</movement>
+				<speed id="15282696">30</speed>
+			</locomotion>
+
+			<hasPart id="05282746" name="tooth">
+				<partShape id="00800826">sharp</partShape>
+
+				<partSize id="05098942" name="shark_teeth_size">
+					<x id="05136150">3</x>
+					<y id="05137165">5</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02157557" name="tail">
+				<number>1</number>
+
+				<partSize id="05098942" name="shark_tail_size">
+					<x id="05136150">80</x>
+					<y id="05137165">40</y>
+					<z id="05103072">5</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02466132" name="fin">
+				<number>3</number>
+
+				<partSize id="05098942" name="shark_fin_size">
+					<x id="05136150">70</x>
+					<y id="05137165">60</y>
+					<z id="05103072">5</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<symbol id="02321009">strong</symbol>
+			<symbol id="14540765">danger</symbol>
+		</manRelationship>
+
+	</object>
+	
+	<!-- PLANTS -->
+
+
+	<object id="07739125" name="apple">
+		<class id="00017222">plant</class>
+		<family id="13134947">fruit</family>
+
+		<genericPhysicalDescription>
+
+			<shape id="02040652">circular</shape>
+
+			<size id="05098942" name="apple">
+				<x id="05136150">8</x>
+				<y id="05137165">8</y>
+				<z id="05103072">8</z>
+			</size>
+
+			<color id="04962784" name="red">
+				<l id="04951373">53</l>
+				<a>80</a>
+				<b>67</b>
+			</color>
+
+			<hasPart id="07738353" name="skin">
+				<number>1</number>
+
+				<partSize id="05098942" name="apple_skin_size">
+					<x id="05136150">12</x>
+					<y id="05137165">12</y>
+					<z id="05103072">1</z>
+				</partSize>
+
+				<partColor id="04962784" name="red">
+					<l id="04951373">53</l>
+					<a>80</a>
+					<b>67</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+		<manRelationship>
+
+			<product id="00021265">food</product>
+			<symbol id="00757080">sin</symbol>
+			<symbol id="14447908">health</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="11842204" name="cactus">
+		<class id="00017222">plant</class>
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="cactus_size">
+				<x id="05136150">100</x>
+				<y id="05137165">200</y>
+				<z id="05103072">30</z>
+			</size>
+			<color id="04967191" name="green">
+				<l id="04951373">46</l>
+				<a>-52</a>
+				<b>50</b>
+			</color>
+			<location id="08505573" name="desert">
+				<humidity id="14535643">0</humidity>
+				<temperature id="05011790">50</temperature>
+				<altitude id="05131647">450</altitude>
+				<vegetation id="08436759">0</vegetation>
+			</location>
+			<hasPart id="13089631" name="thorn">
+				<partSize id="05098942" name="">
+					<x id="05136150">1</x>
+					<y id="05137165">3</y>
+					<z id="05103072">1</z>
+				</partSize>
+			</hasPart>
+		</genericPhysicalDescription>
+	</object>
+
+
+	<!-- ARTIFACTS -->
+
+	<object id="02691156" name="airplane">
+		<class id="00021939">artifact</class>
+		<family id="03100490">transport</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="airplane_size">
+				<x id="05136150">3600</x>
+				<y id="05137165">1100</y>
+				<z id="05103072">3300</z>
+			</size>
+
+			<color id="04960729" name="white">
+				<l id="04951373">100</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<locomotion id="01940403" name="fly">
+				<movement>8</movement>
+				<speed id="15282696">800</speed>
+			</locomotion>
+
+			<hasPart id="04592741" name="wing">
+				<number>2</number>
+				<partSize id="05098942" name="wing_size">
+					<x id="05136150">1600</x>
+					<y id="05137165">200</y>
+					<z id="05103072">150</z>
+				</partSize>
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="03408054" name="fuselage">
+				<number>1</number>
+				<partSize id="05098942" name="fuselage_size">
+					<x id="05136150">1000</x>
+					<y id="05137165">1000</y>
+					<z id="05103072">3000</z>
+				</partSize>
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<function id="03100490">fast transport</function>
+			<symbol id="00295701">long travels</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="02738535" name="armchair">
+		<class id="00021939">artifact</class>
+		<family id="03405725">furniture</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="armchair">
+				<x id="05136150">80</x>
+				<y id="05137165">100</y>
+				<z id="05103072">80</z>
+			</size>
+
+			<color id="04962784" name="red">
+				<l id="04951373">53</l>
+				<a>80</a>
+				<b>67</b>
+			</color>
+
+			<hasPart id="02741475" name="armrest">
+				<number>2</number>
+				<partSize id="05098942" name="armrest_size">
+					<x id="05136150">40</x>
+					<y id="05137165">20</y>
+					<z id="05103072">20</z>
+				</partSize>
+			</hasPart>
+		</genericPhysicalDescription>
+	</object>
+
+	<object id="02818832" name="bed">
+		<class id="00021939">artifact</class>
+		<family id="03405725">furniture</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="bed_size">
+				<x id="05136150">85</x>
+				<y id="05137165">65</y>
+				<z id="05103072">195</z>
+			</size>
+
+			<color id="04960729" name="white">
+				<l id="04951373">100</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<location id="02821627" name="night_bedroom">
+				<time id="15122231">5</time>
+			</location>
+
+			<hasPart id="03731164" name="mattress">
+				<number>1</number>
+
+				<partSize id="05098942" name="mattress_seize">
+					<x id="05136150">80</x>
+					<y id="05137165">60</y>
+					<z id="05103072">190</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="03938244" name="pillow">
+				<number>1</number>
+
+				<partSize id="05098942" name="mattress_seize">
+					<x id="05136150">80</x>
+					<y id="05137165">20</y>
+					<z id="05103072">40</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<function id="14024882">sleep</function>
+			<symbol id="14024882">sleep</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="02834778" name="bicycle">
+		<class id="00021939">artifact</class>
+		<family id="03100490">transport</family>
+		<genericPhysicalDescription>
+			<size id="05098942" name="bicycle">
+				<x id="05136150">60</x>
+				<y id="05137165">100</y>
+				<z id="05103072">180</z>
+			</size>
+			<color id="04960729" name="white">
+				<l id="04951373">100</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<locomotion id="" name="mechanical_run">
+				<movement>6</movement>
+				<speed id="15282696">25</speed>
+			</locomotion>
+
+			<hasPart id="12378912" name="wheel">
+				<number>2</number>
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+		<manRelationship>
+			<function id="00331950">movement</function>
+			<function id="03100490">transport</function>
+			<symbol id="14447908">health</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="06410904" name="book">
+		<class id="00021939">artifact</class>
+		<family id="06410904">book</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="book_size">
+				<x id="05136150">10</x>
+				<y id="05137165">20</y>
+				<z id="05103072">4</z>
+			</size>
+
+			<hasPart id="02840619" name="cover">
+				<number>1</number>
+				<partSize id="05098942" name="">
+					<x id="05136150">10</x>
+					<y id="05137165">20</y>
+					<z id="05103072">0.5</z>
+				</partSize>
+			</hasPart>
+
+			<hasPart id="06256697" name="page">
+				<partSize id="05098942" name="page_size">
+					<x id="05136150">10</x>
+					<y id="05137165">20</y>
+					<z id="05103072">0.1</z>
+				</partSize>
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+		<manRelationship>
+			<function id="00625119">reading</function>
+			<symbol id="05984936">culture</symbol>
+			<symbol id="08276720">school</symbol>
+			<symbol id="07221094">tale</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="02913152" name="building">
+		<class id="00021939">artifact</class>
+		<family id="02913152">building</family>
+		<family id="02897957">architectural_element</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="building">
+				<x id="05136150">1500</x>
+				<y id="05137165">2000</y>
+				<z id="05103072">1500</z>
+			</size>
+
+			<hasPart id="04105068" name="roof">
+				<number>1</number>
+				<partSize id="05098942" name="roof_size">
+					<x id="05136150">1000</x>
+					<y id="05137165">30</y>
+					<z id="05103072">1000</z>
+				</partSize>
+				<partColor id="04962784" name="dark_red">
+					<l id="04951373">30</l>
+					<a>80</a>
+					<b>67</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+		<manRelationship>
+			<function id="02913152">building</function>
+			<function id="03841666">office</function>
+			<function id="04202417">store</function>
+		</manRelationship>
+	</object>
+
+	<object id="02958343" name="car">
+		<class id="00021939">artifact</class>
+		<family id="03100490">transport</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="car_size">
+				<x id="05136150">180</x>
+				<y id="05137165">160</y>
+				<z id="05103072">300</z>
+			</size>
+
+			<locomotion id="" name="mechanical_run">
+				<movement>6</movement>
+				<speed id="15282696">50</speed>
+			</locomotion>
+
+			<hasPart id="12999912" name="car_door">
+				<number>4</number>
+				<partSize id="05098942" name="">
+					<x id="05136150">120</x>
+					<y id="05137165">150</y>
+					<z id="05103072">10</z>
+				</partSize>
+			</hasPart>
+
+			<hasPart id="04313503" name="steering_wheel">
+				<number>1</number>
+				<partShape id="02040652">circular</partShape>
+				<partSize id="05098942" name="steering_wheel_size">
+					<x id="05136150">40</x>
+					<y id="05137165">40</y>
+					<z id="05103072">5</z>
+				</partSize>
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<function id="03100490">transport</function>
+			<symbol id="00295701">travel</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="02980441" name="castle">
+		<class id="00021939">artifact</class>
+		<family id="02913152">building</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="castle_size">
+				<x id="05136150">4000</x>
+				<y id="05137165">2000</y>
+				<z id="05103072">4000</z>
+			</size>
+
+			<color id="04961691" name="grey">
+				<l id="04951373">50</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<hasPart id="04460130" name="tower">
+
+				<partSize id="05098942" name="tower_size">
+					<x id="05136150">1000</x>
+					<y id="05137165">5000</y>
+					<z id="05103072">1000</z>
+				</partSize>
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="03233744" name="lift_bridge">
+				<number>1</number>
+				<partSize id="05098942" name="lift_bridge_size">
+					<x id="05136150">200</x>
+					<y id="05137165">30</y>
+					<z id="05103072">400</z>
+				</partSize>
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<function id="02789579">royal building</function>
+			<symbol id="08153437">royalty</symbol>
+			<symbol id="10231515">king</symbol>
+			<symbol id="10499355">queen</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="03138669" name="crown">
+
+		<genericPhysicalDescription>
+
+			<shape id="02040652">circular</shape>
+			<size id="05098942" name="crown_size">
+				<x id="05136150">20</x>
+				<y id="05137165">10</y>
+				<z id="05103072">20</z>
+			</size>
+
+			<color id="04966240" name="gold_yellow">
+				<l id="04951373">85</l>
+				<a>0</a>
+				<b>85</b>
+			</color>
+
+			<hasPart id="03596787" name="jewel">
+
+				<partSize id="05098942" name="crown_jewel_size">
+					<x id="05136150">2</x>
+					<y id="05137165">3</y>
+					<z id="05103072">5</z>
+				</partSize>
+
+				<partColor id="04968895" name="blue">
+					<l id="04951373">32</l>
+					<a>79</a>
+					<b>-108</b>
+				</partColor>
+
+				<partColor id="04967191" name="green">
+					<l id="04951373">46</l>
+					<a>-52</a>
+					<b>50</b>
+				</partColor>
+
+				<partColor id="04962784" name="red">
+					<l id="04951373">53</l>
+					<a>80</a>
+					<b>67</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="12378912" name="gold">
+				<partColor id="" name="gold_yellow">
+					<l id="04951373">85</l>
+					<a>0</a>
+					<b>85</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<symbol id="05190804">power</symbol>
+			<symbol id="08153437">royalty</symbol>
+			<symbol id="10231515">king</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="03544360" name="house">
+		<class id="00021939">artifact</class>
+		<family id="02913152">building</family>
+		<family id="02897957">architectural_element</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="house_size">
+				<x id="05136150">1500</x>
+				<y id="05137165">2000</y>
+				<z id="05103072">1500</z>
+			</size>
+
+			<hasPart id="04105068" name="roof">
+				<number>1</number>
+
+				<partSize id="05098942" name="house_roof_size">
+					<x id="05136150">1000</x>
+					<y id="05137165">30</y>
+					<z id="05103072">1000</z>
+				</partSize>
+
+				<partColor id="04962784" name="dark_red">
+					<l id="04951373">30</l>
+					<a>80</a>
+					<b>67</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="04587648" name="window">
+				<partSize id="05098942" name="house_window_size">
+					<x id="05136150">150</x>
+					<y id="05137165">100</y>
+					<z id="05103072">3</z>
+				</partSize>
+			</hasPart>
+
+			<hasPart id="03221720" name="door">
+				<partSize id="05098942" name="house_door_size">
+					<x id="05136150">100</x>
+					<y id="05137165">200</y>
+					<z id="05103072">5</z>
+				</partSize>
+			</hasPart>
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<function id="02913152">building</function>
+			<function id="08559508">home</function>
+			<symbol id="08078020">family</symbol>
+			<symbol id="08559508">home</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="03596787" name="jewel">
+		<class id="00021939">artifact</class>
+
+		<genericPhysicalDescription>
+			<size id="05098942" name="jewel_size">
+				<x id="05136150">2</x>
+				<y id="05137165">3</y>
+				<z id="05103072">3</z>
+			</size>
+
+			<color id="04968895" name="blue">
+				<l id="04951373">32</l>
+				<a>79</a>
+				<b>-108</b>
+			</color>
+
+			<color id="04967191" name="green">
+				<l id="04951373">46</l>
+				<a>-52</a>
+				<b>50</b>
+			</color>
+
+			<color id="04962784" name="red">
+				<l id="04951373">53</l>
+				<a>80</a>
+				<b>67</b>
+			</color>
+
+			<partOf id="03138669" name="crown" />
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<symbol id="14491625">richness</symbol>
+			<symbol id="00933154">expensive object</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="03665924" name="light_bulb">
+		<class id="00021939">artifact</class>
+
+		<genericPhysicalDescription>
+
+			<shape id="02040652">circular</shape>
+			<size id="05098942" name="light_bulb_size">
+				<x id="05136150">6</x>
+				<y id="05137165">10</y>
+				<z id="05103072">5</z>
+			</size>
+
+			<hasPart id="14881303" name="glass">
+				<number>1</number>
+			</hasPart>
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<function id="03665366">light diffusor</function>
+			<symbol id="05833840">idea</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="13386614" name="money">
+		<class id="00021939">artifact</class>
+		<family id="13385913">currency</family>
+
+		<manRelationship>
+			<function id="02207206">buying</function>
+			<function id="08366753">economy</function>
+			<symbol id="13393762">banknote</symbol>
+			<symbol id="13388245">coin</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="03788195" name="mosque">
+		<class id="00021939">artifact</class>
+		<family id="02913152">building</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="mosque_size">
+				<x id="05136150">5000</x>
+				<y id="05137165">2000</y>
+				<z id="05103072">3000</z>
+			</size>
+
+			<color id="04960729" name="white">
+				<l id="04951373">100</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<hasPart id="03220513" name="dome">
+				<number>1</number>
+
+				<partShape id="02040652">circular</partShape>
+
+				<partSize id="05098942" name="mosque_dome_size">
+					<x id="05136150">1000</x>
+					<y id="05137165">1500</y>
+					<z id="05103072">800</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="03767745" name="minaret">
+
+				<number>1</number>
+
+				<partSize id="05098942" name="mosque_minaret_size">
+					<x id="05136150">4000</x>
+					<y id="05137165">500</y>
+					<z id="05103072">400</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<function id="02056265">religious building</function>
+			<symbol id="06234825">islam</symbol>
+			<symbol id="05946687">religion</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="03906997" name="pen">
+		<class id="00021939">artifact</class>
+
+		<genericPhysicalDescription>
+			<size id="05098942" name="pen_size">
+				<x id="05136150">1</x>
+				<y id="05137165">14</y>
+				<z id="05103072">1</z>
+			</size>
+
+			<color id="04968895" name="blue">
+				<l id="04951373">32</l>
+				<a>79</a>
+				<b>-108</b>
+			</color>
+
+			<color id="04967191" name="green">
+				<l id="04951373">46</l>
+				<a>-52</a>
+				<b>50</b>
+			</color>
+
+			<color id="04962784" name="red">
+				<l id="04951373">53</l>
+				<a>80</a>
+				<b>67</b>
+			</color>
+
+			<hasPart id="01896031" name="feather">
+				<number>1</number>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<function id="01698271">writing</function>
+			<function id="01698271">write</function>
+		</manRelationship>
+	</object>
+
+	<object id="03249342" name="pharmacy">
+		<class id="00021939">artifact</class>
+		<family id="02913152">building</family>
+		<family id="04202417">store</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="pharmacy_size">
+				<x id="05136150">600</x>
+				<y id="05137165">300</y>
+				<z id="05103072">600</z>
+			</size>
+
+			<hasPart id="12378912" name="cross">
+				<number>1</number>
+
+				<partSize id="05098942" name="pharmacy_cross_size">
+					<x id="05136150">100</x>
+					<y id="05137165">80</y>
+					<z id="05103072">50</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+
+				<partColor id="04967191" name="green">
+					<l id="04951373">46</l>
+					<a>-52</a>
+					<b>50</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+		<manRelationship>
+			<function id="03740161">medicine selling</function>
+			<symbol id="14447908">health</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="03928116" name="piano">
+		<class id="00021939">artifact</class>
+		<family id="03800933">musical_instrument</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="piano_size">
+				<x id="05136150">140</x>
+				<y id="05137165">100</y>
+				<z id="05103072">160</z>
+			</size>
+
+			<color id="04960277" name="black">
+				<l id="04951373">0</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<hasPart id="03613592" name="white_keys">
+				<number>128</number>
+				<partSize id="05098942" name="key_size">
+					<x id="05136150">2</x>
+					<y id="05137165">2</y>
+					<z id="05103072">10</z>
+				</partSize>
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="03613592" name="black_keys">
+				<number>128</number>
+				<partSize id="05098942" name="key_size">
+					<x id="05136150">1</x>
+					<y id="05137165">1</y>
+					<z id="05103072">8</z>
+				</partSize>
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<function id="00429048">entertainment</function>
+			<product id="04981139">sound</product>
+			<product id="07020895">music</product>
+			<symbol id="07020895">music</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="13268842" name="present">
+		<family id="13268842">present</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="present_size">
+				<x id="05136150">30</x>
+				<y id="05137165">30</y>
+				<z id="05103072">30</z>
+			</size>
+
+			<hasPart id="02880308" name="ribbon_bow">
+				<number>1</number>
+				<partColor id="04962784" name="red">
+					<l id="04951373">53</l>
+					<a>80</a>
+					<b>67</b>
+				</partColor>
+
+			</hasPart>
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<symbol id="15250178">birthday</symbol>
+			<symbol id="15196186">christmas</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="04105068" name="roof">
+		<class id="00021939">artifact</class>
+		<family id="02897957">architectural_element</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="roof_size">
+				<x id="05136150">1000</x>
+				<y id="05137165">30</y>
+				<z id="05103072">1000</z>
+			</size>
+
+			<color id="04962784" name="dark_red">
+				<l id="04951373">30</l>
+				<a>80</a>
+				<b>67</b>
+			</color>
+
+			<hasPart id="15039445" name="shingle">
+				<partSize id="05098942" name="shingle_size">
+					<x id="05136150">10</x>
+					<y id="05137165">30</y>
+					<z id="05103072">2</z>
+				</partSize>
+				<partColor id="04962784" name="dark_red">
+					<l id="04951373">30</l>
+					<a>80</a>
+					<b>67</b>
+				</partColor>
+			</hasPart>
+
+			<partOf id="02913152" name="building" />
+			<partOf id="03544360" name="house" />
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<function id="">coverage</function>
+		</manRelationship>
+	</object>
+
+	<object id="04401088" name="telephone">
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="telephone">
+				<x id="05136150">6</x>
+				<y id="05137165">15</y>
+				<z id="05103072">3</z>
+			</size>
+
+			<color id="04961691" name="grey">
+				<l id="04951373">50</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<hasPart id="04402580" name="receiver">
+				<number>1</number>
+
+				<partSize id="05098942" name="telephone_receiver_size">
+					<x id="05136150">20</x>
+					<y id="05137165">10</y>
+					<z id="05103072">5</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="03614007" name="keyboard">
+				<number>1</number>
+				<partSize id="05098942" name="telephone_keyboard_size">
+					<x id="05136150">4</x>
+					<y id="05137165">5</y>
+					<z id="05103072">4</z>
+				</partSize>
+			</hasPart>
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<function id="06252138">communication</function>
+		</manRelationship>
+	</object>
+
+	<object id="04574999" name="wheel">
+		<class id="00021939">artifact</class>
+		<genericPhysicalDescription>
+			<shape id="02040652">circular</shape>
+
+			<size id="05098942" name="wheel_size">
+				<x id="05136150">20</x>
+				<y id="05137165">50</y>
+				<z id="05103072">50</z>
+			</size>
+
+			<color id="04960277" name="black">
+				<l id="04951373">0</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<hasPart id="04283378" name="spoke">
+
+				<partSize id="05098942" name="spoke_size">
+					<x id="05136150">80</x>
+					<y id="05137165">2</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<partOf id="02834778" name="bicycle">
+				<number>2</number>
+			</partOf>
+			<partOf id="02958343" name="car">
+				<number>4</number>
+			</partOf>
+			<partOf id="04468005" name="train" />
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<function id="03100490">transport</function>
+			<symbol id="00940412">invention</symbol>
+		</manRelationship>
+	</object>
+
+	<!-- NUOVI PROTOTIPI AGGIUNTI 8/11/14 -->
+	
+	<object id="01944390" name="snail">
+		<class id="00015388">animal</class>
+		<family id="01940736">mollusk</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="snail_size">
+				<x id="05136150">2</x>
+				<y id="05137165">5</y>
+				<z id="05103072">3</z>
+			</size>
+
+			<color id="04971928" name="brown">
+				<l id="04951373">47</l>
+				<a>14</a>
+				<b>55</b>
+			</color>
+
+			<location id="09284015" name="forest">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">600</altitude>
+				<vegetation id="08436759">80</vegetation>
+			</location>
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>5</foodQuantity>
+			</feeding>
+
+			<hasPart id="02584915" name="feeler">
+				<number>2</number>
+
+				<partSize id="05098942">
+					<x id="05136150">0.1</x>
+					<y id="05137165">1</y>
+					<z id="05103072">0.1</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">47</l>
+					<a>14</a>
+					<b>55</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01903756" name="shell">
+				<number>1</number>
+
+				<partSize id="05098942">
+					<x id="05136150">1</x>
+					<y id="05137165">2</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">47</l>
+					<a>14</a>
+					<b>55</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<symbol id="00980527">slowness</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="01662784" name="turtle">
+		<class id="00015388">animal</class>
+		<family id="01661091">reptile</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="turtle_size">
+				<x id="05136150">15</x>
+				<y id="05137165">8</y>
+				<z id="05103072">25</z>
+			</size>
+
+			<color id="04967191" name="green">
+				<l id="04951373">46</l>
+				<a>-52</a>
+				<b>50</b>
+			</color>
+
+			<location id="09284015" name="forest">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">600</altitude>
+				<vegetation id="08436759">80</vegetation>
+			</location>
+			<location id="09426788" name="sea">
+		        <humidity id="14535643">100</humidity>
+		        <altitude id="">0</altitude>
+		        <temperature id="05011790">5</temperature>
+		        <vegetation id="08436759">5</vegetation>
+		      </location>
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>10</foodQuantity>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">5</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+
+				<partSize id="05098942" name="turtle_leg_size">
+					<x id="05136150">5</x>
+					<y id="05137165">7</y>
+					<z id="05103072">5</z>
+				</partSize>
+
+				<partColor id="04967191" name="green">
+					<l id="04951373">46</l>
+					<a>-52</a>
+					<b>50</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01903756" name="shell">
+				<number>1</number>
+
+				<partSize id="05098942">
+					<x id="05136150">10</x>
+					<y id="05137165">5</y>
+					<z id="05103072">15</z>
+				</partSize>
+
+				<partColor id="04967191" name="green">
+					<l id="04951373">46</l>
+					<a>-52</a>
+					<b>50</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<symbol id="00980527">slowness</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="02129604" name="tiger">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<family id="02120997">feline</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="tiger_size">
+				<x id="05136150">70</x>
+				<y id="05137165">100</y>
+				<z id="05103072">200</z>
+			</size>
+
+			<color id="00393873" name="yellow">
+				<l id="04951373">80</l>
+				<a>-20</a>
+				<b>94</b>
+			</color>
+
+			<location id="08645847" name="savanna">
+				<humidity id="14535643">50</humidity>
+				<temperature id="05011790">40</temperature>
+				<altitude id="05131647">100</altitude>
+				<vegetation id="08436759">50</vegetation>
+			</location>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>80</foodQuantity>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<locomotion id="01926311" name="run">
+				<movement>5</movement>
+				<speed id="15282696">40</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+
+				<partSize id="05098942" name="tiger_leg_size">
+					<x id="05136150">5</x>
+					<y id="05137165">5</y>
+					<z id="05103072">20</z>
+				</partSize>
+
+				<partColor id="00393873" name="yellow">
+					<l id="04951373">80</l>
+					<a>-20</a>
+					<b>94</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01899062" name="fur">
+
+				<partColor id="00393873" name="yellow">
+					<l id="04951373">80</l>
+					<a>-20</a>
+					<b>94</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02157557" name="tail">
+				<number>1</number>
+
+				<partSize id="05098942" name="tiger_tail_size">
+					<x id="05136150">5</x>
+					<y id="05137165">5</y>
+					<z id="05103072">30</z>
+				</partSize>
+
+				<partColor id="00393873" name="yellow">
+					<l id="04951373">80</l>
+					<a>-20</a>
+					<b>94</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02784732" name="stripe">
+
+				<partColor id="00393873" name="yellow">
+					<l id="04951373">80</l>
+					<a>-20</a>
+					<b>94</b>
+				</partColor>
+				<partColor id="00393873" name="black">
+					<l>0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="05282746" name="tooth">
+				<partShape id="00800826">sharp</partShape>
+
+				<partSize id="05098942" name="tiger_teeth_size">
+					<x id="05136150">3</x>
+					<y id="05137165">5</y>
+					<z id="05103072">1</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<symbol id="04907826">wild</symbol>
+			<symbol id="10193026">hunter</symbol>
+		</manRelationship>
+
+	</object>
+
+	<object id="02129165" name="lion">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<family id="02120997">feline</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="lion_size">
+				<x id="05136150">70</x>
+				<y id="05137165">120</y>
+				<z id="05103072">200</z>
+			</size>
+
+			<color id="04973291" name="beige">
+				<l id="04951373">63</l>
+				<a>13</a>
+				<b>32</b>
+			</color>
+
+			<location id="08645847" name="savanna">
+				<humidity id="14535643">50</humidity>
+				<temperature id="05011790">40</temperature>
+				<altitude id="05131647">100</altitude>
+				<vegetation id="08436759">50</vegetation>
+			</location>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>80</foodQuantity>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<locomotion id="01926311" name="run">
+				<movement>5</movement>
+				<speed id="15282696">40</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+
+				<partSize id="05098942" name="lion_leg_size">
+					<x id="05136150">5</x>
+					<y id="05137165">5</y>
+					<z id="05103072">20</z>
+				</partSize>
+
+				<partColor id="04973291" name="beige">
+					<l id="04951373">63</l>
+					<a>13</a>
+					<b>32</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01899062" name="fur">
+
+				<partColor id="04973291" name="beige">
+					<l id="04951373">63</l>
+					<a>13</a>
+					<b>32</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02157557" name="tail">
+				<number>1</number>
+
+				<partSize id="05098942" name="lion_tail_size">
+					<x id="05136150">5</x>
+					<y id="05137165">5</y>
+					<z id="05103072">30</z>
+				</partSize>
+
+				<partColor id="04973291" name="beige">
+					<l id="04951373">63</l>
+					<a>13</a>
+					<b>32</b>
+				</partColor>
+			</hasPart>
+
+
+			<hasPart id="05546040" name="jaw">
+				<partShape id="00800826">sharp</partShape>
+
+				<partSize id="05098942" name="lion_jaw_size">
+					<x id="05136150">3</x>
+					<y id="05137165">5</y>
+					<z id="05103072">1</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01899746" name="mane">
+
+				<partColor id="04973291" name="beige">
+					<l id="04951373">63</l>
+					<a>13</a>
+					<b>32</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<symbol id="04907826">wild</symbol>
+			<symbol id="10231515">king</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="01726692" name="snake">
+		<class id="00015388">animal</class>
+		<family id="01661091">reptile</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="snake">
+				<x id="05136150">5</x>
+				<y id="05137165">5</y>
+				<z id="05103072">100</z>
+			</size>
+
+			<color id="04971928" name="brown">
+				<l id="04951373">47</l>
+				<a>14</a>
+				<b>55</b>
+			</color>
+
+			<location id="08645847" name="savanna">
+				<humidity id="14535643">50</humidity>
+				<temperature id="05011790">40</temperature>
+				<altitude id="05131647">100</altitude>
+				<vegetation id="08436759">50</vegetation>
+			</location>
+
+			<location id="09284015" name="forest">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">600</altitude>
+				<vegetation id="08436759">80</vegetation>
+			</location>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>70</foodQuantity>
+			</feeding>
+
+			<locomotion id="01885845" name="crawling">
+				<movement>3</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<hasPart id="01902877" name="scale">
+				<partColor id="04971928" name="brown">
+					<l id="04951373">47</l>
+					<a>14</a>
+					<b>55</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="05301072" name="tongue">
+				<partShape id="02479602">forked</partShape>
+
+				<partColor id="04970916" name="pink">
+					<l id="04951373">81</l>
+					<a>21</a>
+					<b>5</b>
+				</partColor>
+			</hasPart>
+
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<product id="15032376">poison</product>
+		</manRelationship>
+
+	</object>
+
+	<object id="02484322" name="monkey">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<family id="09807075">primate</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="monkey_size">
+				<x id="05136150">40</x>
+				<y id="05137165">120</y>
+				<z id="05103072">30</z>
+			</size>
+
+			<color id="04971928" name="brown">
+				<l id="04951373">47</l>
+				<a>14</a>
+				<b>55</b>
+			</color>
+
+			<location id="09284015" name="forest">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">600</altitude>
+				<vegetation id="08436759">80</vegetation>
+				<favoriteLocation id="13104059">tree</favoriteLocation>
+			</location>
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>5</foodQuantity>
+				<favoriteFood id="07753592">banana</favoriteFood>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+
+				<partSize id="05098942" name="monkey_leg_size">
+					<x id="05136150">5</x>
+					<y id="05137165">3</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">47</l>
+					<a>14</a>
+					<b>55</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01899062" name="fur">
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">47</l>
+					<a>14</a>
+					<b>55</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02157557" name="tail">
+				<number>1</number>
+
+				<partSize id="05098942" name="monkey_tail_size">
+					<x id="05136150">2</x>
+					<y id="05137165">2</y>
+					<z id="05103072">30</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">47</l>
+					<a>14</a>
+					<b>55</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+	</object>
+
+	<object id="02118333" name="fox">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<family id="02083346">canidae</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="fox_size">
+				<x id="05136150">25</x>
+				<y id="05137165">50</y>
+				<z id="05103072">60</z>
+			</size>
+
+			<color id="04962784" name="red">
+				<l id="04951373">53</l>
+				<a>80</a>
+				<b>67</b>
+			</color>
+
+			<location id="09284015" name="wood">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">600</altitude>
+				<vegetation id="08436759">80</vegetation>
+			</location>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>80</foodQuantity>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<locomotion id="01926311" name="run">
+				<movement>5</movement>
+				<speed id="15282696">30</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+
+				<partSize id="05098942" name="fox_leg_size">
+					<x id="05136150">2</x>
+					<y id="05137165">2</y>
+					<z id="05103072">5</z>
+				</partSize>
+
+				<partColor id="04962784" name="red">
+					<l id="04951373">53</l>
+					<a>80</a>
+					<b>67</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01899062" name="fur">
+
+				<partColor id="04962784" name="red">
+					<l id="04951373">53</l>
+					<a>80</a>
+					<b>67</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02157557" name="tail">
+				<number>1</number>
+
+				<partSize id="05098942" name="fox_tail_size">
+					<x id="05136150">4</x>
+					<y id="05137165">4</y>
+					<z id="05103072">30</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+	</object>
+
+	<object id="02503517" name="elephant">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<family id="02453108">pachyderm</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="elephant_size">
+				<x id="05136150">1</x>
+				<y id="05137165">4</y>
+				<z id="05103072">5</z>
+			</size>
+
+			<color id="04961691" name="grey">
+				<l id="04951373">50</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<location id="08645847" name="savanna">
+				<humidity id="14535643">50</humidity>
+				<temperature id="05011790">40</temperature>
+				<altitude id="05131647">100</altitude>
+				<vegetation id="08436759">50</vegetation>
+			</location>
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>50</foodQuantity>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+
+				<partSize id="05098942" name="elephant_leg_size">
+					<x id="05136150">40</x>
+					<y id="05137165">40</y>
+					<z id="05103072">100</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02157557" name="tail">
+				<number>1</number>
+
+				<partSize id="05098942" name="elephant_tail_size">
+					<x id="05136150">2</x>
+					<y id="05137165">2</y>
+					<z id="05103072">30</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="05320899" name="ear">
+				<number>2</number>
+
+				<partSize id="05098942" name="elephant_ear_size">
+					<x id="05136150">100</x>
+					<y id="05137165">100</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="05599084" name="proboscis">
+				<number>1</number>
+
+				<partSize id="05098942" name="elephant_proboscis_size">
+					<x id="05136150">10</x>
+					<y id="05137165">100</y>
+					<z id="05103072">10</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="14757547" name="tusk">
+				<number>2</number>
+
+				<partSize id="05098942" name="elephant_tusk_size">
+					<x id="05136150">10</x>
+					<y id="05137165">60</y>
+					<z id="05103072">10</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+	</object>
+
+	<object id="02389559" name="donkey">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<family id="02374149">equine</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="donkey_size">
+				<x id="05136150">100</x>
+				<y id="05137165">180</y>
+				<z id="05103072">270</z>
+			</size>
+
+			<color id="04961691" name="grey">
+				<l id="04951373">50</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<location id="08598301" name="grassland">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">100</altitude>
+				<vegetation id="08436759">60</vegetation>
+				<favoriteLocation id="04294879">stable</favoriteLocation>
+			</location>
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>30</foodQuantity>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<locomotion id="01926311" name="run">
+				<movement>5</movement>
+				<speed id="15282696">30</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+
+				<partSize id="05098942" name="donkey_leg_size">
+					<x id="05136150">10</x>
+					<y id="05137165">15</y>
+					<z id="05103072">100</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02157557" name="tail">
+				<number>1</number>
+
+				<partSize id="05098942" name="donkey_tail_size">
+					<x id="05136150">2</x>
+					<y id="05137165">2</y>
+					<z id="05103072">20</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="05320899" name="ear">
+				<number>2</number>
+
+				<partSize id="05098942" name="donkey_ear_size">
+					<x id="05136150">5</x>
+					<y id="05137165">50</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<function id="03100490">transport</function>
+		</manRelationship>
+	</object>
+
+	<object id="01613294" name="eagle">
+		<class id="00015388">animal</class>
+		<family id="01503061">bird</family>
+		<family id="01604330">raptor</family>
+
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="eagle_size">
+				<x id="05136150">20</x>
+				<y id="05137165">40</y>
+				<z id="05103072">15</z>
+			</size>
+
+			<color id="04971928" name="brown">
+				<l id="04951373">30</l>
+				<a>10</a>
+				<b>40</b>
+			</color>
+
+			<location id="09359803" name="mountain">
+				<humidity id="14535643">60</humidity>
+				<temperature id="05011790">20</temperature>
+				<altitude id="05131647">900</altitude>
+				<vegetation id="08436759">60</vegetation>
+			</location>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>60</foodQuantity>
+			</feeding>
+
+			<locomotion id="01940403" name="fly">
+				<movement>8</movement>
+				<speed id="15282696">30</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>2</number>
+
+				<partSize id="05098942" name="eagle_leg_size">
+					<x id="05136150">5</x>
+					<y id="05137165">5</y>
+					<z id="05103072">5</z>
+				</partSize>
+
+				<partColor id="04965661" name="yellow">
+					<l id="04951373">97</l>
+					<a>-22</a>
+					<b>94</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02151625" name="wing">
+				<number>2</number>
+
+				<partSize id="05098942" name="eagle_wing_size">
+					<x id="05136150">70</x>
+					<y id="05137165">30</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01758510" name="beak">
+				<number>1</number>
+
+				<partSize id="05098942" name="eagle_beak_size">
+					<x id="05136150">2</x>
+					<y id="05137165">2</y>
+					<z id="05103072">6</z>
+				</partSize>
+
+				<partColor id="04965661" name="yellow">
+					<l id="04951373">97</l>
+					<a>-22</a>
+					<b>94</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+	</object>
+
+	<object id="02121620" name="cat">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<family id="02120997">feline</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="cat_size">
+				<x id="05136150">20</x>
+				<y id="05137165">30</y>
+				<z id="05103072">70</z>
+			</size>
+
+			<color id="04961691" name="grey">
+				<l id="04951373">50</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<color id="04960277" name="black">
+				<l id="04951373">0</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<location id="08524735" name="city">
+				<humidity id="14535643">50</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">100</altitude>
+				<vegetation id="08436759">10</vegetation>
+				<favoriteLocation id="03544360">house</favoriteLocation>
+			</location>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>20</foodQuantity>
+				<favoriteFood>mouse</favoriteFood>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<locomotion id="01926311" name="run">
+				<movement>5</movement>
+				<speed id="15282696">25</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+
+				<partSize id="05098942" name="cat_leg_size">
+					<x id="05136150">4</x>
+					<y id="05137165">10</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01899062" name="fur">
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02157557" name="tail">
+				<number>1</number>
+
+				<partSize id="05098942" name="cat_tail_size">
+					<x id="05136150">3</x>
+					<y id="05137165">20</y>
+					<z id="05103072">3</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01901828" name="whisker">
+				<number>2</number>
+
+				<partSize id="05098942" name="cat_whiskers_size">
+					<x id="05136150">3</x>
+					<y id="05137165">1</y>
+					<z id="05103072">1</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+
+			</hasPart>
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<symbol id="10193026">mouse_hunter</symbol>
+			<symbol id="02919594">domestic</symbol>
+
+		</manRelationship>
+
+	</object>
+
+	<object id="01877134" name="kangaroo">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<family id="01874434">marsupial</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="kangaroo_size">
+				<x id="05136150">40</x>
+				<y id="05137165">100</y>
+				<z id="05103072">40</z>
+			</size>
+
+			<color id="04961691" name="grey">
+				<l id="04951373">50</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<color id="04962784" name="red">
+				<l id="04951373">53</l>
+				<a>80</a>
+				<b>67</b>
+			</color>
+
+			<location id="09445289" name="steppe">
+				<humidity id="14535643">10</humidity>
+				<temperature id="05011790">10</temperature>
+				<altitude id="05131647">100</altitude>
+				<vegetation id="08436759">20</vegetation>
+			</location>
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>40</foodQuantity>
+			</feeding>
+
+			<locomotion id="01963942" name="jump">
+				<movement>7</movement>
+				<speed id="15282696">15</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>2</number>
+
+				<partSize id="05098942" name="kangaroo_leg_size">
+					<x id="05136150">15</x>
+					<y id="05137165">50</y>
+					<z id="05103072">15</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+
+				<partColor id="04962784" name="red">
+					<l id="04951373">53</l>
+					<a>80</a>
+					<b>67</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01899062" name="fur">
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+
+				<partColor id="04962784" name="red">
+					<l id="04951373">53</l>
+					<a>80</a>
+					<b>67</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="02157557" name="tail">
+				<number>1</number>
+
+				<partSize id="05098942" name="kangaroo_tail_size">
+					<x id="05136150">10</x>
+					<y id="05137165">90</y>
+					<z id="05103072">10</z>
+				</partSize>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+
+				<partColor id="04962784" name="red">
+					<l id="04951373">53</l>
+					<a>80</a>
+					<b>67</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="05516848" name="pouch">
+				<number>1</number>
+
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+
+				<partColor id="04962784" name="red">
+					<l id="04951373">53</l>
+					<a>80</a>
+					<b>67</b>
+				</partColor>
+
+			</hasPart>
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<symbol id="08831004">Australia</symbol>
+		</manRelationship>
+	</object>
+
+	<object id="01887787" name="cow">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<family id="02402010">bovine</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="cow_size">
+				<x id="05136150">80</x>
+				<y id="05137165">120</y>
+				<z id="05103072">200</z>
+			</size>
+
+			<color id="04971928" name="brown">
+				<l id="04951373">47</l>
+				<a>14</a>
+				<b>55</b>
+			</color>
+
+			<location id="08598301" name="grassland">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">800</altitude>
+				<vegetation id="08436759">60</vegetation>
+				<favoriteLocation id="03322099">farm</favoriteLocation>
+			</location>
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>60</foodQuantity>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+
+				<partSize id="05098942" name="cow_leg_size">
+					<x id="05136150">5</x>
+					<y id="05137165">30</y>
+					<z id="05103072">5</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">47</l>
+					<a>14</a>
+					<b>55</b>
+				</partColor>
+
+			</hasPart>
+
+
+			<hasPart id="02157557" name="tail">
+				<number>1</number>
+
+				<partSize id="05098942" name="cow_tail_size">
+					<x id="05136150">2</x>
+					<y id="05137165">20</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">47</l>
+					<a>14</a>
+					<b>55</b>
+				</partColor>
+			</hasPart>
+			
+			<hasPart id="04694441" name="spot">
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01325417" name="horn">
+				<number>2</number>
+				
+				<partSize id="05098942" name="cow_horn_size">
+					<x id="05136150">20</x>
+					<y id="05137165">3</y>
+					<z id="05103072">3</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<product id="01874434">meat</product>
+			<product id="07844042">milk</product>
+			<function id="07844042">milk production</function>
+		</manRelationship>
+	</object>
+	
+	<object id="02139199" name="bat">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="bat_size">
+				<x id="05136150">10</x>
+				<y id="05137165">20</y>
+				<z id="05103072">5</z>
+			</size>
+
+			<color id="04971928" name="brown">
+				<l id="04951373">47</l>
+				<a>14</a>
+				<b>55</b>
+			</color>
+
+			<location id="09284015" name="forest">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">600</altitude>
+				<vegetation id="08436759">80</vegetation>
+				<time id="15122231">5</time>
+			</location>
+
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>5</foodQuantity>
+			</feeding>
+
+			<locomotion id="01940403" name="fly">
+				<movement>8</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>2</number>
+
+				<partSize id="05098942" name="bat_leg_size">
+					<x id="05136150">2</x>
+					<y id="05137165">5</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">47</l>
+					<a>14</a>
+					<b>55</b>
+				</partColor>
+			</hasPart>
+			
+			<hasPart id="02151625" name="wing">
+				<number>2</number>
+
+				<partSize id="05098942" name="bat_wing_size">
+					<x id="05136150">10</x>
+					<y id="05137165">30</y>
+					<z id="05103072">1</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+			</hasPart>
+			
+			<hasPart id="01899062" name="fur">
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+			</hasPart>
+
+<hasPart id="05328447" name="ear">
+        <number>2</number>
+        <partSize id="05098942" name="ear_size">
+          <x id="05136150">0.3</x>
+          <y id="05137165">1.5</y>
+          <z id="05103072">0.1</z>
+        </partSize>
+        <partColor id="04961691" name="grey">
+          <l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+        </partColor>
+      </hasPart>
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<product id="11481209">ultrasound</product>
+			<symbol id="09567238">vampire</symbol>
+		</manRelationship>
+	</object>
+	
+	<object id="02330245" name="mouse">
+		<class id="00015388">animal</class>
+		<family id="02329401">rodent</family>
+		<genericPhysicalDescription>
+			<size id="05098942" name="mouse_size">
+				<x id="05136150">3</x>
+				<y id="05137165">9</y>
+				<z id="05103072">3</z>
+			</size>
+			<color id="04961691" name="grey">
+				<l id="04951373">50</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+			<location id="09393605" name="champaign">
+				<humidity id="14535643">20</humidity>
+				<temperature id="05011790">10</temperature>
+				<altitude id="05131647">0</altitude>
+				<vegetation id="08436759">50</vegetation>
+			</location>
+			<feeding id="01324431" name="carnivore">
+				<foodType>1</foodType>
+				<foodQuantity>20</foodQuantity>
+			</feeding>
+			<feeding id="01324610" name="herbivore">
+				<favoriteFood id="07850329">cheese</favoriteFood>
+			</feeding>
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">1</speed>
+			</locomotion>
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+				<partSize id="05098942" name="leg_size">
+					<x id="05136150">1</x>
+					<y id="05137165">1</y>
+					<z id="05103072">1</z>
+				</partSize>
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+			<hasPart id="02157557" name="tail">
+				<number>1</number>
+				<partSize id="05098942" name="mouse_tail_size">
+					<x id="05136150">0.5</x>
+					<y id="05137165">1.5</y>
+					<z id="05103072">0.5</z>
+				</partSize>
+				<partColor id="04961691" name="grey">
+					<l id="04951373">50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+	</object>
+
+	<object id="02534734" name="salmon">
+		<class id="00015388">animal</class>
+		<family id="02512053">fish</family>
+		<genericPhysicalDescription>
+			
+			<size id="05098942" name="salmon_size">
+				<x>30</x>
+				<y>30</y>
+				<z>80</z>
+			</size>
+			<location id="09411430" name="river">
+				<humidity>100</humidity>
+				<temperature>10</temperature>
+				<favoriteLocation id="02704844">costal river</favoriteLocation>
+				<favoriteLocation id="15009326">freshwater</favoriteLocation>
+			</location>
+			<location id="09328904" name="lake">
+				<humidity id="14535643">100</humidity>
+				<temperature id="05011790">30</temperature>
+				<vegetation id="08436759">30</vegetation>
+				<favoriteLocation id="15009326">freshwater</favoriteLocation>
+			</location>
+			
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>10</foodQuantity>
+				<favoriteFood id="02512053">fish</favoriteFood>
+			</feeding>
+
+			<locomotion id="01960911" name="swim">
+				<movement>1</movement>
+			</locomotion>
+			
+			<hasPart id="05268112" name="flesh">
+				<partColor id="04970916" name="pink">
+					<l>72</l>
+					<a>43</a>
+					<b>8</b>
+				</partColor>
+			</hasPart>
+			<hasPart id="01902877" name="scale">
+				<partColor id="04961691" name="grey">
+					<l>50</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+			<hasPart id="02466132" name="fin">
+				<number>3</number>
+			</hasPart>
+			<hasPart id="02157557" name="tail">
+				<number>1</number>
+			</hasPart>
+		</genericPhysicalDescription>
+		<manRelationship>
+			<symbol id="00097108">go upstream</symbol>
+		</manRelationship>
+	</object>
+	
+	<object id="01772222" name="spider">
+		<class id="00015388">animal</class>
+		<family id="01769347">arachnid</family>
+		<genericPhysicalDescription>
+			<size id="05098942" name="spider_size">
+				<x id="05136150">3</x>
+				<y id="05137165">5</y>
+				<z id="05103072">3</z>
+			</size>
+			<color id="04960277" name="black">
+				<l id="04951373">0</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+			<location id="03544360" name="house">
+				<humidity id="14535643">0</humidity>
+				<temperature id="05011790">20</temperature>
+				<vegetation id="08436759">0</vegetation>
+			</location>
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>2</foodQuantity>
+				<favoriteFood id="02159955">insect</favoriteFood>
+			</feeding>
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">1</speed>
+			</locomotion>
+			<hasPart id="05560787" name="leg">
+				<number>8</number>
+				<partSize id="05098942" name="spider_leg_size">
+					<x id="05136150">0.3</x>
+					<y id="05137165">0.3</y>
+					<z id="05103072">1</z>
+				</partSize>
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+			<hasPart id="949491" name="eye">
+				<number>8</number>
+				<partShape id="02040652">circular</partShape>
+				<partSize id="05098942" name="spider_eye_size">
+					<x id="05136150">0.3</x>
+					<y id="05137165">0.3</y>
+					<z id="05103072">0.3</z>
+				</partSize>
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+		<manRelationship>
+			<product id="04568557">web</product>
+		</manRelationship>
+	</object>
+	
+	<object id="01558594" name="blackbird">
+		<class id="00015388">animal</class>
+		<family id="01503061">bird</family>
+		<genericPhysicalDescription>
+			<size id="05098942" name="blackbird_size">
+				<x id="05136150">15</x>
+				<y id="05137165">20</y>
+				<z id="05103072">30</z>
+			</size>
+			<color id="04960277" name="black">
+				<l id="04951373">0</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+			<location id="08438533" name="wood">
+				<humidity id="14535643">5</humidity>
+				<temperature id="05011790">20</temperature>
+				<altitude id="05131647">500</altitude>
+				<vegetation id="08436759">80</vegetation>
+				<favoriteLocation id="13104059">trees</favoriteLocation>
+			</location>
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>15</foodQuantity>
+				<favoriteFood id="01922303">worms</favoriteFood>
+			</feeding>
+			<locomotion id="01940403" name="fly">
+				<movement>8</movement>
+				<speed id="15282696">5</speed>
+			</locomotion>
+			<hasPart id="01758510" name="beak">
+				<number>1</number>
+				<partSize id="05098942" name="blackbird_beak_size">
+					<x id="05136150">1</x>
+					<y id="05137165">2</y>
+					<z id="05103072">1</z>
+				</partSize>
+				<partColor id="04965661" name="yellow">
+					<l id="04951373">80</l>
+					<a>-20</a>
+					<b>94</b>
+				</partColor>
+			</hasPart>
+			<hasPart id="04592741" name="wing">
+				<number>2</number>
+				<partSize id="05098942" name="blackbird_wing_size">
+					<x id="05136150">5</x>
+					<y id="05137165">10</y>
+					<z id="05103072">2</z>
+				</partSize>
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+	</object>
+	
+	<object id="02130308" name="cheetah">
+		<class id="00015388">animal</class>
+		<family id="02120997">feline</family>
+		<genericPhysicalDescription>
+			<size id="05098942" name="cheetah_size">
+				<x id="05136150">70</x>
+				<y id="05137165">140</y>
+				<z id="05103072">85</z>
+			</size>
+			<color id="04965661" name="yellow">
+				<l id="04951373">80</l>
+				<a>-20</a>
+				<b>94</b>
+			</color>
+			<location id="08645847" name="savanna">
+				<humidity id="14535643">20</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">0</altitude>
+				<vegetation id="08436759">50</vegetation>
+			</location>
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>80</foodQuantity>
+			</feeding>
+			<locomotion id="01926311" name="run">
+				<movement>5</movement>
+				<speed id="15282696">80</speed>
+			</locomotion>
+			<hasPart id="04694441" name="spot">
+				<partShape id="02040652">circular</partShape>
+				<partSize id="05098942" name="cheetah_spot_size">
+					<x id="05136150">3</x>
+					<y id="05137165">3</y>
+					<z id="05103072">1</z>
+				</partSize>
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+				<partSize id="05098942" name="cheetah_leg_size">
+					<x id="05136150">15</x>
+					<y id="05137165">15</y>
+					<z id="05103072">65</z>
+				</partSize>
+				<partColor id="04965661" name="yellow">
+					<l id="04951373">80</l>
+					<a>-20</a>
+					<b>94</b>
+				</partColor>
+			</hasPart>
+			<hasPart id="02157557" name="tail">
+				<number>1</number>
+				<partSize id="05098942" name="cheetah_tail_size">
+					<x id="05136150">10</x>
+					<y id="05137165">70</y>
+					<z id="05103072">10</z>
+				</partSize>
+				<partColor id="04965661" name="yellow">
+					<l id="04951373">80</l>
+					<a>-20</a>
+					<b>94</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+	</object>
+	<object id="02206856" name="bee">
+		<class id="00015388">animal</class>
+		<family id="02159955">insect</family>
+		<genericPhysicalDescription>
+			<size id="05098942" name="bee_size">
+				<x id="05136150">3</x>
+				<y id="05137165">2</y>
+				<z id="05103072">2</z>
+			</size>
+			<color id="04965661" name="yellow">
+				<l id="04951373">80</l>
+				<a>-20</a>
+				<b>94</b>
+			</color>
+			<location id="08569998" name="field">
+				<humidity id="14535643">5</humidity>
+				<temperature id="05011790">20</temperature>
+				<altitude id="05131647">500</altitude>
+				<vegetation id="08436759">60</vegetation>
+				<favoriteLocation id="11669921">flower</favoriteLocation>
+			</location>
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>2</foodQuantity>
+			</feeding>
+			<locomotion id="01940403" name="fly">
+				<movement>8</movement>
+				<speed id="15282696">15</speed>
+			</locomotion>
+			<hasPart id="04592741" name="wing">
+				<number>2</number>
+				<partSize id="05098942" name="bee_wing_size">
+					<x id="05136150">0.5</x>
+					<z id="05103072">0.2</z>
+					<y id="05137165">0.7</y>
+				</partSize>
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+			<hasPart id="02784732" name="stripe">
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+				<partColor id="04965661" name="yellow">
+					<l id="04951373">80</l>
+					<a>-20</a>
+					<b>94</b>
+				</partColor>
+			</hasPart>
+			<hasPart id="14332085" name="sting">
+				<number>1</number>
+				<partSize id="05098942" name="bee_sting_size">
+					<x id="05136150">0.2</x>
+					<z id="05103072">0.2</z>
+					<y id="05137165">0.7</y>
+				</partSize>
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+			<hasPart id="02784732" name="stripe">
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+				<partColor id="04965661" name="yellow">
+					<l id="04951373">80</l>
+					<a>-20</a>
+					<b>94</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+		<manRelationship>
+			<product id="07858978">honey</product>
+		</manRelationship>
+	</object>
+	<object id="02430045" name="deer">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<family id="02430045">cervidae</family>
+		<genericPhysicalDescription>
+			<size id="05098942" name="deer_size">
+				<x id="05136150">80</x>
+				<y id="05137165">200</y>
+				<z id="05103072">120</z>
+			</size>
+			<color id="04971928" name="brown">
+				<l id="04951373">30</l>
+				<a>10</a>
+				<b>40</b>
+			</color>
+			<location id="09284015" name="forest">
+				<humidity id="14535643">20</humidity>
+				<temperature id="05011790">20</temperature>
+				<altitude id="05131647">500</altitude>
+				<vegetation id="08436759">70</vegetation>
+			</location>
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>20</foodQuantity>
+			</feeding>
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">40</speed>
+			</locomotion>
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+				<partSize id="05098942" name="deer_leg_size">
+					<x id="05136150">20</x>
+					<y id="05137165">10</y>
+					<z id="05103072">40</z>
+				</partSize>
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+			</hasPart>
+			<hasPart id="01325658" name="antler">
+				<number>2</number>
+				<partSize id="05098942" name="deer_antler_size">
+					<x id="05136150">20</x>
+					<y id="05137165">20</y>
+					<z id="05103072">30</z>
+				</partSize>
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+	</object>
+	<object id="01629276" name="salamander">
+		<class id="00015388">animal</class>
+		<family id="01627424">amphibian</family>
+		<genericPhysicalDescription>
+			<size id="05098942" name="salamander_size">
+				<x id="05136150">10</x>
+				<y id="05137165">20</y>
+				<z id="05103072">5</z>
+			</size>
+			<color id="04960277" name="black">
+				<l id="04951373">0</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+			<location id="09284015" name="forest">
+				<humidity id="14535643">50</humidity>
+				<temperature id="05011790">10</temperature>
+				<altitude id="05131647">0</altitude>
+				<vegetation id="08436759">70</vegetation>
+			</location>
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>2</foodQuantity>
+			</feeding>
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+			<hasPart id="04694441" name="spot">
+				<partShape id="02040652">circular</partShape>
+				<partSize id="05098942" name="salamander_spot_size">
+					<x id="05136150">0.5</x>
+					<y id="05137165">0.5</y>
+					<z id="05103072">0.5</z>
+				</partSize>
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+				<partColor id="04965661" name="yellow">
+					<l id="04951373">80</l>
+					<a>-20</a>
+					<b>94</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+	</object>
+	<object id="01970164" name="octopus">
+		<class id="00015388">animal</class>
+		<family id="01940736">mollusk</family>
+		<genericPhysicalDescription>
+			<size id="05098942" name="octopus_size">
+				<x id="05136150">40</x>
+				<y id="05137165">40</y>
+				<z id="05103072">80</z>
+			</size>
+			<color id="04962784" name="red">
+				<l id="04951373">75</l>
+				<a>36</a>
+				<b>16</b>
+			</color>
+			<location id="09426788" name="sea">
+				<humidity id="14535643">100</humidity>
+				<altitude id="">0</altitude>
+				<temperature id="05011790">5</temperature>
+				<vegetation id="08436759">5</vegetation>
+			</location>
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>10</foodQuantity>
+			</feeding>
+			<locomotion id="01960911" name="swim">
+				<movement>1</movement>
+				<speed id="15282696">20</speed>
+			</locomotion>
+			<hasPart id="02584643" name="tentacle">
+				<number>8</number>
+				<partSize id="05098942" name="octopus_tentacle_size">
+					<x id="05136150">8</x>
+					<y id="05137165">8</y>
+					<z id="05103072">50</z>
+				</partSize>
+				<partColor id="04962784" name="red">
+					<l id="04951373">75</l>
+					<a>36</a>
+					<b>16</b>
+				</partColor>
+			</hasPart>
+			<hasPart id="02465414" name="sucker">
+				<partShape id="02040652">circular</partShape>
+				<partSize id="05098942" name="octopus_sucker_size">
+					<x id="05136150">4</x>
+					<y id="05137165">4</y>
+					<z id="05103072">4</z>
+				</partSize>
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+	</object>
+	<object id="01726692" name="python">
+		<class id="00015388">animal</class>
+		<family id="01661091">reptile</family>
+		<genericPhysicalDescription>
+			<size id="05098942" name="python_size">
+				<x id="05136150">15</x>
+				<y id="05137165">200</y>
+				<z id="05103072">10</z>
+			</size>
+			<color id="04967191" name="green">
+				<l id="04951373">42</l>
+				<a>-11</a>
+				<b>48</b>
+			</color>
+			<location id="08645847" name="savanna">
+				<humidity id="14535643">20</humidity>
+				<temperature id="05011790">25</temperature>
+				<altitude id="05131647">0</altitude>
+				<vegetation id="08436759">60</vegetation>
+			</location>
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>40</foodQuantity>
+			</feeding>
+			<locomotion id="01885845" name="crawl">
+				<movement>3</movement>
+				<speed id="15282696">1</speed>
+			</locomotion>
+			<hasPart id="05301072" name="tongue">
+				<number>1</number>
+				<partShape id="02479602">forked</partShape>
+				<partSize id="05098942" name="python_tongue_size">
+					<x id="05136150">2</x>
+					<y id="05137165">8</y>
+					<z id="05103072">1</z>
+				</partSize>
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+	</object>
+
+	<!-- vulture -->
+	<object id="01616318" name="vulture">
+		<class id="00015388">animal</class>
+		<family id="01503061">bird</family>
+		<genericPhysicalDescription>
+			<size id="05098942" name="vulture_size">
+				<x id="05136150">40</x>
+				<y id="05137165">120</y>
+				<z id="05103072">60</z>
+			</size>
+			<color id="04971928" name="brown">
+				<l id="04951373">30</l>
+				<a>10</a>
+				<b>40</b>
+			</color>
+			<location id="08645847" name="savanna">
+				<humidity id="14535643">20</humidity>
+				<temperature id="05011790">20</temperature>
+				<altitude id="05131647">500</altitude>
+				<vegetation id="08436759">40</vegetation>
+			</location>
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>50</foodQuantity>
+				<favoriteFood id="01758895">carrion</favoriteFood>
+			</feeding>
+			<locomotion id="01940403" name="fly">
+				<movement>8</movement>
+				<speed id="15282696">60</speed>
+			</locomotion>
+			<hasPart id="04592741" name="wing">
+				<number>2</number>
+				<partSize id="05098942" name="vulture_wing_size">
+					<x id="05136150">30</x>
+					<y id="05137165">60</y>
+					<z id="05103072">10</z>
+				</partSize>
+				<partColor id="04971928" name="brown">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+			</hasPart>
+			<hasPart id="01758510" name="beak">
+				<number>1</number>
+				<partShape id="02312354">hooked</partShape>
+				<partSize id="05098942" name="vulture_beak_size">
+					<x id="05136150">3</x>
+					<y id="05137165">5</y>
+					<z id="05103072">3</z>
+				</partSize>
+				<partColor id="04965661" name="yellow">
+					<l id="04951373">80</l>
+					<a>-20</a>
+					<b>94</b>
+				</partColor>
+			</hasPart>
+			<hasPart id="05546540" name="neck">
+				<number>1</number>
+				<partShape id="02034986">curved</partShape>
+				<partSize id="05098942" name="vulture_neck_size">
+					<x id="05136150">5</x>
+					<y id="05137165">20</y>
+					<z id="05103072">5</z>
+				</partSize>
+				<partColor id="04970916" name="pink">
+					<l id="04951373">76</l>
+					<a>24</a>
+					<b>6</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+	</object>
+	
+	<object id="02165456" name="ladybug">
+		<class id="00015388">animal</class>
+		<family id="02159955">insect</family>
+
+		<genericPhysicalDescription>
+			
+			<shape id="02040652">circular</shape>
+			
+			<size id="05098942" name="ladybird_size">
+				<x id="05136150">6</x>
+				<y id="05137165">3</y>
+				<z id="05103072">0.5</z>
+			</size>
+
+			<color id="04962784" name="red">
+				<l id="04951373">53</l>
+				<a>80</a>
+				<b>67</b>
+			</color>
+
+			<feeding id="" name="carnivore">
+				<foodType>5</foodType>
+				<favoriteFood id="02252226">aphid</favoriteFood>
+			</feeding>
+
+			<locomotion id="01940403" name="fly">
+				<movement>8</movement>
+				<speed id="15282696">0.5</speed>
+			</locomotion>
+
+			<hasPart id="02151625" name="wing">
+				<partShape id="01789481">spotted</partShape>
+				<number>2</number>
+
+				<partSize id="05098942">
+					<x id="05136150">0.3</x>
+					<y id="05137165">0.3</y>
+					<z id="05103072">0.02</z>
+				</partSize>
+
+				<partColor id="04962784" name="red">
+					<l id="04951373">53</l>
+					<a>80</a>
+					<b>67</b>
+				</partColor>
+			</hasPart>
+			
+			<hasPart id="04694441" name="spot">
+				<partColor id="04960277" name="black">
+					<l id="04951373">30</l>
+					<a>10</a>
+					<b>40</b>
+				</partColor>
+			</hasPart>
+
+		</genericPhysicalDescription>
+	</object>
+
+	<!-- PROTOTIPI aggiunti 04/03/2015 -->
+	<object id="02222138" name="ant">
+    <class id="00015388">animal</class>
+    <family id="02159955">insect</family>
+    <genericPhysicalDescription>
+      <size id="05098942" name="ant_size">
+        <x id="05136150">0.4</x>
+        <y id="05137165">1</y>
+        <z id="05103072">0.4</z>
+      </size>
+      <color id="04960277" name="black">
+				<l id="04951373">0</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+			
+      <location id="09284015" name="forest">
+				<humidity id="14535643">60</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">600</altitude>
+				<vegetation id="08436759">80</vegetation>
+        <favoriteLocation id="02222138">anthill</favoriteLocation>
+      </location>
+      
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>1</foodQuantity>
+			</feeding>
+			<feeding id="01324431" name="carnivore">
+				<foodType>5</foodType>
+				<foodQuantity>1</foodQuantity>
+			</feeding>
+
+			<hasPart id="05560787" name="leg">
+				<number>6</number>
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+        </partColor>
+			</hasPart>
+			
+			<hasPart id="02587546" name="antenna">
+				<number>2</number>
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+        </partColor>
+			</hasPart>
+			
+      
+    </genericPhysicalDescription>
+    <manRelationship>
+    	<symbol id="00840083">laborious</symbol>
+    	<symbol id="08240723">community</symbol>
+      <symbol id="01685687">ordered</symbol>
+    </manRelationship>
+  
+
+  </object>
+	<object id="02403325" name="bull">
+		<class id="00015388">animal</class>
+		<family id="01861778">mammal</family>
+		<family id="02402010">bovine</family>
+
+		<genericPhysicalDescription>
+
+			<size id="05098942" name="bull_size">
+				<x id="05136150">85</x>
+				<y id="05137165">125</y>
+				<z id="05103072">205</z>
+			</size>
+
+			<color id="04971928" name="brown">
+				<l id="04951373">47</l>
+				<a>14</a>
+				<b>55</b>
+			</color>
+			<color id="04960277" name="black">
+				<l id="04951373">0</l>
+				<a>0</a>
+				<b>0</b>
+			</color>
+
+			<location id="08598301" name="grassland">
+				<humidity id="14535643">70</humidity>
+				<temperature id="05011790">30</temperature>
+				<altitude id="05131647">800</altitude>
+				<vegetation id="08436759">60</vegetation>
+				<favoriteLocation id="03322099">farm</favoriteLocation>
+			</location>
+
+			<feeding id="01324610" name="herbivore">
+				<foodType>1</foodType>
+				<foodQuantity>70</foodQuantity>
+			</feeding>
+
+			<locomotion id="01904930" name="walk">
+				<movement>4</movement>
+				<speed id="15282696">10</speed>
+			</locomotion>
+
+			<hasPart id="05560787" name="leg">
+				<number>4</number>
+
+				<partSize id="05098942" name="bull_leg_size">
+					<x id="05136150">5</x>
+					<y id="05137165">30</y>
+					<z id="05103072">5</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">47</l>
+					<a>14</a>
+					<b>55</b>
+				</partColor>
+
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+
+			</hasPart>
+
+
+			<hasPart id="02157557" name="tail">
+				<number>1</number>
+
+				<partSize id="05098942" name="bull_tail_size">
+					<x id="05136150">2</x>
+					<y id="05137165">20</y>
+					<z id="05103072">2</z>
+				</partSize>
+
+				<partColor id="04971928" name="brown">
+					<l id="04951373">47</l>
+					<a>14</a>
+					<b>55</b>
+				</partColor>
+				<partColor id="04960277" name="black">
+					<l id="04951373">0</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+
+			<hasPart id="01325417" name="horn">
+				<number>2</number>
+				
+				<partSize id="05098942" name="bull_horn_size">
+					<x id="05136150">25</x>
+					<y id="05137165">5</y>
+					<z id="05103072">5</z>
+				</partSize>
+
+				<partColor id="04960729" name="white">
+					<l id="04951373">100</l>
+					<a>0</a>
+					<b>0</b>
+				</partColor>
+			</hasPart>
+		</genericPhysicalDescription>
+
+		<manRelationship>
+			<symbol id="05008449">virility</symbol>
+		</manRelationship>
+	</object>
+
+</cs:objects>
+
