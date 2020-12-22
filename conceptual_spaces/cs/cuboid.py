@@ -48,6 +48,7 @@ class Cuboid:
         
         return list(map(helper, self._p_min, point, self._p_max))
 
+
     def get_closest_points(self, other):
         """Computes closest points a in this and b in the other cuboid."""
         
@@ -143,8 +144,14 @@ class Cuboid:
         return Cuboid(p_min, p_max, dom_union)
         
     def project_onto(self, new_domains):
-        """Projects this cuboid onto the given domains (which must be a subset of the cuboid's current domains)."""
+        """Projects this cuboid onto the given domains (which will be forced to be a subset of the cuboid's current domains)."""
         
+        common_domains = {}
+        for dom, dims in new_domains.items():
+            if dom in self._domains and self._domains[dom] == dims:
+                common_domains[dom] = dims
+        new_domains=common_domains
+                
         if not all(dom in list(self._domains.items()) for dom in list(new_domains.items())):
             raise Exception("Illegal set of new domains!")
         
@@ -170,15 +177,25 @@ def check(p_min, p_max, domains):
     dims = [dim for domain in list(domains.values()) for dim in domain]        
     
     if not len(p_min) == len(p_max) == cs._n_dim:
+        print("a")
+        print(len(p_min))
+        print(len(p_max))
+        print(cs._n_dim)
         return False
 
     for i in range(len(p_max)):
         if i in dims and (p_max[i] == float("inf") or p_min[i] == float("-inf")):
+            print("b")
             return False
         if i not in dims and (p_max[i] != float("inf") or p_min[i] != float("-inf")):
+            print("c")
+            print(p_max)
+            print(domains)
+            print(dims)
             return False
 
     if not all(dom in list(cs._domains.items()) for dom in list(domains.items())):
+        print("d")
         return False
     
     return reduce(lambda x, y: x and y, list(map(lambda y,z: y <= z, p_min, p_max)))
