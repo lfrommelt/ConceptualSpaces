@@ -591,6 +591,7 @@ class Concept:
                                          {'type':'ineq', 'fun': lambda x: second.membership_of(x[cs._n_dim:]) - alpha - tolerance}]  # z in alpha-cut of second
                     opt = scipy.optimize.minimize(neg_betweenness, inner_x, args=(y,), method='COBYLA', constraints=inner_constraints, options={'catol':2*tolerance, 'tol':cs._epsilon, 'maxiter':1000, 'rhobeg':0.01})
                     if not opt.success and opt.status != 2 and opt.status != 3: # opt.status = 2 means that we reached the iteration limit, opt.status = 3 means the subroutine terminated prematurely, as the size of rounding error is becoming damaging
+                        print(opt)
                         raise Exception("inner optimization failed: {0}".format(opt.message))
                     return opt
             
@@ -602,6 +603,7 @@ class Concept:
                 to_minimize_y = lambda y: -1 * inner_optimization(y).fun
                 opt = scipy.optimize.minimize(to_minimize_y, outer_x, method='COBYLA', constraints=outer_constraints, options={'catol':2*tolerance, 'tol':cs._epsilon, 'maxiter':1000, 'rhobeg':0.01})
                 if not opt.success and opt.status != 2: # opt.status = 2 means that we reached the iteration limit
+                    print(opt)
                     raise Exception("outer optimization failed: {0}".format(opt.message))
                 candidate_results.append(opt.fun)
         
