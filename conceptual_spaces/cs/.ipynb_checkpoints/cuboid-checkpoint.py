@@ -195,6 +195,9 @@ def check(p_min, p_max, domains):
     for i in range(len(p_max)):
         if i in dims and (p_max[i] == float("inf") or p_min[i] == float("-inf")):
             print("b")
+            print(p_max)
+            print(domains)
+            print(dims)
             return False
         if i not in dims and (p_max[i] != float("inf") or p_min[i] != float("-inf")):
             print("c")
