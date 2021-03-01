@@ -99,8 +99,6 @@ def _path_for_core(cuboids, d1, d2):
 
     polygon = None    
     for cuboid in cuboids:
-        '''print('cuboid:\n',cuboid)
-        print(any([not (cuboid[0][i]==this._axis_ranges[j][0] and cuboid[1][i]==this._axis_ranges[i][1]) for i,j in [d1,d2]]),'\n')'''
         if any([not (cuboid[0][i]<=this._axis_ranges[i][0] and cuboid[1][i]>=this._axis_ranges[i][1]) for i in [d1,d2]]):
             p_min = cuboid[0]
             p_max = cuboid[1]
@@ -108,8 +106,22 @@ def _path_for_core(cuboids, d1, d2):
             if polygon == None:
                 polygon = cub
             else:
-                polygon = polygon.union(cub)
-    
+                try:
+                    if not polygon.union(cub):
+                        polygon = shapely.geometry.box(min([p_min[d1]]+[point[0] for point in polygon.exterior.coords]),
+                                                       min([p_min[d2]]+[point[1] for point in polygon.exterior.coords]),
+                                                       max([p_max[d1]]+[point[0] for point in polygon.exterior.coords]),
+                                                       max([p_max[d2]]+[point[1] for point in polygon.exterior.coords]))
+                    else:
+                        polygon = polygon.union(cub)
+                except:
+                    polygon = shapely.geometry.box(min([p_min[d1]]+[point[0] for point in polygon.exterior.coords]),
+                                                   min([p_min[d2]]+[point[1] for point in polygon.exterior.coords]),
+                                                   max([p_max[d1]]+[point[0] for point in polygon.exterior.coords]),
+                                                   max([p_max[d2]]+[point[1] for point in polygon.exterior.coords]))
+                        
+    if not polygon:
+        return None
     if isinstance(polygon, shapely.geometry.MultiPolygon):
         print("beep")
         verts = []
@@ -188,12 +200,13 @@ def _draw_concept(concept, color, epsilons):
     for i in range(3):
         d1, d2 = this._current_2d_indices[i]
         core_path = _path_for_core(concept, d1, d2)
-        core_patch = patches.PathPatch(core_path, facecolor=color, lw=2, alpha=this._alpha_2d)
-        this._ax_2d[i].add_patch(core_patch)
-        
-        alpha_path = _path_for_core_alpha_cut(concept, d1, d2, epsilons[d1], epsilons[d2])
-        alpha_patch = patches.PathPatch(alpha_path, facecolor='none', edgecolor=color, linestyle='dashed')
-        this._ax_2d[i].add_patch(alpha_patch)
+        if core_path:
+            core_patch = patches.PathPatch(core_path, facecolor=color, lw=2, alpha=this._alpha_2d)
+            this._ax_2d[i].add_patch(core_patch)
+
+            alpha_path = _path_for_core_alpha_cut(concept, d1, d2, epsilons[d1], epsilons[d2])
+            alpha_patch = patches.PathPatch(alpha_path, facecolor='none', edgecolor=color, linestyle='dashed')
+            this._ax_2d[i].add_patch(alpha_patch)
 
 def _repaint_everything():
     """Repaints the whole window."""
@@ -204,6 +217,7 @@ def _repaint_everything():
     _init_ax_2d(2)
     for concept_name in this._active_concepts:
         concept, color, epsilons = this._concepts[concept_name]
+        #print(concept_name)
         _draw_concept(concept, color, epsilons)
     this._fig.canvas.draw_idle()
 
@@ -246,7 +260,7 @@ def init(dims=[]):
     # now add radio buttons for selecting dimensions
     this._fig.subplots_adjust(left=0.2, right=0.98, top=0.95, bottom=0.05)
     
-    first_dim_radios_ax = this._fig.add_axes([0.025, 0.88, 0.12, 0.12], facecolor='w') 
+    first_dim_radios_ax = this._fig.add_axes([0.025, 0.75, 0.12, 0.20], facecolor='w') 
     first_dim_radios_ax.set_title("First dimension")
     first_dim_radios = RadioButtons(first_dim_radios_ax, this._dimensions, active=0)
     def first_dim_click_handler(label):
@@ -257,7 +271,7 @@ def init(dims=[]):
         _repaint_everything()
     first_dim_radios.on_clicked(first_dim_click_handler)
     
-    second_dim_radios_ax = this._fig.add_axes([0.025, 0.73, 0.12, 0.12], facecolor='w')
+    second_dim_radios_ax = this._fig.add_axes([0.025, 0.51, 0.12, 0.2], facecolor='w')
     second_dim_radios_ax.set_title("Second dimension")
     second_dim_radios = RadioButtons(second_dim_radios_ax, this._dimensions, active=1)
     def second_dim_click_handler(label):
@@ -269,7 +283,7 @@ def init(dims=[]):
         this._fig.canvas.draw_idle()
     second_dim_radios.on_clicked(second_dim_click_handler)
 
-    third_dim_radios_ax = this._fig.add_axes([0.025, 0.58, 0.12, 0.12], facecolor='w')
+    third_dim_radios_ax = this._fig.add_axes([0.025, 0.27, 0.12, 0.2], facecolor='w')
     third_dim_radios_ax.set_title("Third dimension")
     third_dim_radios = RadioButtons(third_dim_radios_ax, this._dimensions, active=2)
     def third_dim_click_handler(label):
@@ -310,7 +324,7 @@ def update():
 
     # grab all concepts
     standard_colors = deque(['r', 'g', 'b', 'y', 'purple', 'orange', 'brown', 'gray'])
-    print('axes_ranges:\n',this._axis_ranges)
+    #print('axes_ranges:\n',this._axis_ranges)
     this._concepts = {}
     for name in list(space._concepts.keys()):
         concept = space._concepts[name]

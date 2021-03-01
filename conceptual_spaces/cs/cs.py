@@ -25,6 +25,8 @@ this._concept_colors = None
 this._no_weights = None
 this._precision_digits = 15
 this._epsilon = 1e-10
+this._z=lambda x:x
+this.dim_to_dom = {}
 
 def init(n_dim, domains, dim_names = None):
     """Initializes a conceptual space with the given numer of dimensions and the given set of domains.
@@ -62,6 +64,9 @@ def init(n_dim, domains, dim_names = None):
         for dim in dims:
             local_dim_weights[dim] = 1
         dim_weights[dom] = local_dim_weights
+    for domain in domains:
+        for dim in domains[domain]:
+            this.dim_to_dom[str(dim)]=domain
     this._no_weights = wghts.Weights(dom_weights, dim_weights)
     this._def_dim_weights = dim_weights
     this._def_dom_weights = dom_weights

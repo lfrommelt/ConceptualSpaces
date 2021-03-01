@@ -201,6 +201,7 @@ def check(p_min, p_max, domains):
             return False
         if i not in dims and (p_max[i] != float("inf") or p_min[i] != float("-inf")):
             print("c")
+            print(p_min)
             print(p_max)
             print(domains)
             print(dims)

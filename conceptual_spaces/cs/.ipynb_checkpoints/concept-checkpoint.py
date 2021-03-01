@@ -7,6 +7,7 @@ Created on Tue Jun  6 11:54:30 2017
 
 from math import exp, sqrt, factorial, pi, gamma, log
 from random import uniform
+from random import choices
 import itertools
 import numdifftools.nd_statsmodels as nd
 import scipy.optimize
@@ -16,6 +17,7 @@ from . import cuboid as cub
 from . import weights as wghts
 from . import cs
 from functools import reduce
+from scipy.special import comb
 
 class Concept:
     """A concept, implementation of the Fuzzy Simple Star-Shaped Set (FSSSS)."""
@@ -60,6 +62,7 @@ class Concept:
         #{domain:self._weights[domain] self._weights}
         #new_weights=self._weights.project_onto()
         
+        #point candidates stemming from a cuboid with size inf in a certain dimension are evaluated without this dimension/domain (w=0)
         min_distance = reduce(min, [cs.distance(x, point, wghts.Weights({domain: self._weights._domain_weights[domain] for domain in self._weights._domain_weights if not(x[cs._domains[domain][0]] == float('inf'))}, self._weights._dimension_weights)) for x in self._core.find_closest_point_candidates(point)])
         
         return self._mu * exp(-self._c * min_distance)
@@ -380,7 +383,7 @@ class Concept:
         factor = self._mu / (self._c**n * weight_product)
 
         # outer sum
-        outer_sum = 0.0        
+        outer_sum = 0.0
         for i in range(0, n+1):
             # inner sum
             inner_sum = 0.0
@@ -407,6 +410,13 @@ class Concept:
             outer_sum += inner_sum
         return factor * outer_sum
 
+    def size_given_c(self,c):
+        oldc=self._c
+        self._c=c
+        size=self.size()
+        self._c=oldc
+        return size
+    
     def size(self):
         """Computes the hypervolume of this concept."""
         
@@ -417,11 +427,13 @@ class Concept:
         for l in range(1, num_cuboids + 1):
             inner_sum = 0.0
 
-            subsets = list(itertools.combinations(self._core._cuboids, l))           
+            subsets = list(itertools.combinations(self._core._cuboids, l))
+            print(subsets)
             for subset in subsets:
                 intersection = subset[0]
                 for cuboid in subset:
                     intersection = intersection.intersect_with(cuboid)
+                    print(intersection)
                 inner_sum += self._hypervolume_cuboid(intersection)
                 
             hypervolume += inner_sum * (-1.0)**(l+1)
@@ -591,7 +603,6 @@ class Concept:
                                          {'type':'ineq', 'fun': lambda x: second.membership_of(x[cs._n_dim:]) - alpha - tolerance}]  # z in alpha-cut of second
                     opt = scipy.optimize.minimize(neg_betweenness, inner_x, args=(y,), method='COBYLA', constraints=inner_constraints, options={'catol':2*tolerance, 'tol':cs._epsilon, 'maxiter':1000, 'rhobeg':0.01})
                     if not opt.success and opt.status != 2 and opt.status != 3: # opt.status = 2 means that we reached the iteration limit, opt.status = 3 means the subroutine terminated prematurely, as the size of rounding error is becoming damaging
-                        print(opt)
                         raise Exception("inner optimization failed: {0}".format(opt.message))
                     return opt
             
@@ -603,7 +614,6 @@ class Concept:
                 to_minimize_y = lambda y: -1 * inner_optimization(y).fun
                 opt = scipy.optimize.minimize(to_minimize_y, outer_x, method='COBYLA', constraints=outer_constraints, options={'catol':2*tolerance, 'tol':cs._epsilon, 'maxiter':1000, 'rhobeg':0.01})
                 if not opt.success and opt.status != 2: # opt.status = 2 means that we reached the iteration limit
-                    print(opt)
                     raise Exception("outer optimization failed: {0}".format(opt.message))
                 candidate_results.append(opt.fun)
         
@@ -715,47 +725,111 @@ class Concept:
         else:
             raise Exception("Unknown method")
 
+    '''def pdf(self,x, size):
+        print(self.membership_of(x))
+        return self.membership_of(x) / size'''
+    
+    def crisp_membership_conservative(self, point):
+        """Returns if the given point is a member of the crisp subset of the concept. Inf-values in the point are ignored. A point, that is 
+        more specific than the concept in any cuboid is rejected. No Exception checking."""
+        for cuboid in self._core._cuboids:
+            rejected = False
+            for dim in range(len(point)):
+                if not cuboid._p_min[dim]<=point[dim]<=cuboid._p_max[dim] and not point[dim]==float('inf'):
+                    rejected=True
+                    break
+                elif not point[dim]==float('inf') and cuboid._p_max[dim]==float('inf'):
+                    rejected=True
+                    break
+            if not rejected:
+                return True
+        return False
+                
+    
+    def crisp_sample(self, num_samples):
+        """Samples 'num_samples' instances from the concept, each havimg a membeship of 1. Undefined values are assigned
+        with the probability equivalent to the ration of cuboids, that are undefined in this dimension"""
+        undefined_ratio=[]
+        boundaries=[]
+        for dim in range(cs._n_dim):
+            core_min = float("inf")
+            core_max = float("-inf")
+            n_undefined=0
+            for c in self._core._cuboids:
+                if c._p_max[dim]==float('inf'):
+                    n_undefined+=1
+                else:
+                    core_min = min(core_min, c._p_min[dim])
+                    core_max = max(core_max, c._p_max[dim])
+            undefined_ratio.append(n_undefined/len(self._core._cuboids))
+            boundaries.append([core_min,core_max])
+        
+        samples=[]
+        while len(samples) < num_samples:    
+            # create a uniform sample based on the boundaries
+            candidate=[]
+            for domain in cs._domains:
+                if uniform(0,1)>=undefined_ratio[cs._domains[domain][0]]:
+                    candidate+=[uniform(boundaries[x][0], boundaries[x][1]) for x in cs._domains[domain]]
+                else:
+                    candidate+=[float('inf') for _ in cs._domains[domain]]
+            if self.crisp_membership_conservative(candidate):
+                samples.append(candidate)
+        return samples
+        
+        
+        
     def sample(self, num_samples):
         """Samples 'num_samples' instances from the concept, based on its membership function."""
         
         # get probability densitiy function by dividing the membership function by the concept's size
         # this ensures that the integral over the function is equal to one.
-        size = self.size()
-        pdf = lambda x: self.membership_of(x) / size
+        pdf = lambda x: self.membership_of(x)
         
         samples = []
         
         # compute the boundaries to sample from:
         # for each dimension, compute the intersection of membership(x) with y = 0.001
         boundaries = []
+        choiceweights=[[0,0] for _ in range(cs._n_dim)]
         for dim in range(cs._n_dim):
             core_min = float("inf")
             core_max = float("-inf")
             for c in self._core._cuboids:
-                core_min = min(core_min, c._p_min[dim])
-                core_max = max(core_max, c._p_max[dim])
+                if c._p_min[dim] > float('-inf'):
+                    core_min = min(core_min, c._p_min[dim])
+                    core_max = max(core_max, c._p_max[dim])
+                    choiceweights[dim][0]+=1
+                else:
+                    choiceweights[dim][1]+=1
             
-            if core_min == float("-inf") and core_max == float("inf"):
+            '''if core_min == float("-inf") and core_max == float("inf"):
                 # concept not defined in this dimension --> use arbitrary interval [-2,+2]
                 # TODO: come up with something better
                 boundaries.append([-2, 2])
-            else:
-                # concept defined in this dimensions --> use borders of 0.001-cut
+            else:'''
+            # concept defined in this dimensions --> use borders of 0.001-cut
+            #print([x for (x, y) in list(self._core._domains.items()) if dim in y])
+            if not core_min==float('inf'):
                 dom = [x for (x, y) in list(self._core._domains.items()) if dim in y][0]
                 difference = - log(0.001/self._mu) / (self._c * self._weights._domain_weights[dom] * sqrt(self._weights._dimension_weights[dom][dim]))
                 boundaries.append([core_min - difference, core_max + difference])
-        
+            else:
+                #should never ever ever be sampled from
+                boundaries.append([666,666])
         # use rejection sampling to generate the expected number of samples
         while len(samples) < num_samples:
             
             # create a uniform sample based on the boundaries
             candidate = [i for i in range(cs._n_dim)]
-            candidate = [uniform(boundaries[x][0], boundaries[x][1]) for x in candidate]
+            for domain in cs._domains:
+                a=choices([[uniform(boundaries[x][0], boundaries[x][1]) for x in cs._domains[domain]], [float('inf') for x in cs._domains[domain]]],weights=choiceweights[cs._domains[domain][0]])
+                candidate[cs._domains[domain][0]:cs._domains[domain][-1]+1] = a[0]
             
             u = uniform(0,1)
-            
-            if u * (1.1/size) <= pdf(candidate):
+            if u < pdf(candidate):
                 samples.append(candidate)
+
         
         return samples
 

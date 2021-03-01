@@ -162,13 +162,13 @@ def from_cuboids(cuboids, domains):
         return Core(cubs, domains)  # all cuboids already intersect --> nothing to do
     
     # need to perform repair mechanism        
-    midpoints = []
+    midpoints = [[] for _ in range(len(cubs[0]._p_max))]
     for cuboid in cubs: # midpoint of each cuboid
-        midpoints.append(list(map(lambda x, y: 0.5*(x + y) if not(x==float('-inf')) else 0, cuboid._p_min, cuboid._p_max)))
+        for dim in range(len(cubs[0]._p_max)):
+            if not cuboid._p_max[dim]==float('inf'):
+                midpoints[dim].append(0.5*(cuboid._p_min[dim] + cuboid._p_max[dim]))
     # sum up all midpoints & divide by number of cuboids
-    midpoint = reduce(lambda x, y: list(map(lambda a,b: a+b, x, y)), midpoints)
-    midpoint = [x/len(cubs) for x in midpoint]
-            
+    midpoint = [sum(midpoints[dim])/len(midpoints[dim]) if len(midpoints[dim]) else float('inf') for dim in range(len(cubs[0]._p_max))]
     # extend cuboids
     modified_cuboids = []
     for cuboid in cubs:
